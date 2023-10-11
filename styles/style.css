@@ -17,3 +17,31 @@
   background-color: var(--main-bg);
 }
 */
+
+#navbar {
+   height: 10vh;
+   border-bottom: 2px black solid;
+   background-color: grey;
+   display: flex;
+   padding: 1vh;
+   justify-content: space-between;
+}
+
+#compost-id {
+   font-size: 8vh;
+}
+
+#burger-menu {
+   font-size: 8vh;
+}
+
+#main-container {
+   background-color: beige;
+   height: 80vh;
+}
+
+#footer {
+   background-color: grey;
+   height: 10vh;
+   border-top: 2px black solid;
+}
