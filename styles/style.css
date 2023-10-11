@@ -1,31 +1,3 @@
-/* Reusable variable declaration*/
-:root {
-  /* 
-/* :root { */
-/* 
-  Example:
-  --main-color: red;
-  */
-/* } */
-
-/*
-  css variable declaration and use:
-
-.cool-div {
-  --main-bg: red;
-}
-
-.cool-paragraph {
-  background-color: var(--main-bg);
-}
-*/
-
-/* Reusable variable declaration*/
-:root {
-  /* 
-  Example:
-  --main-color: red;
-  */
 #navbar {
    height: 10vh;
    border-bottom: 2px black solid;
@@ -57,46 +29,46 @@
 /* Ephraim's css start */
 
 #main_user_interaction {
-  box-sizing: border-box;
+   box-sizing: border-box;
 }
 
 #main_user_interaction {
-  display: flex;
-  height: 100vh;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+   display: flex;
+   height: 100vh;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
 }
 
 .main_text_box {
-  display: flex;
-  padding: 5px;
+   display: flex;
+   padding: 5px;
 }
 
 .main_text_box_username,
 .main_text_box_password {
-  border-radius: 50px;
+   border-radius: 50px;
 }
 
 input {
-  border-color: black;
-  border-style: solid;
+   border-color: black;
+   border-style: solid;
 }
 
 label {
-  width: 100px;
-  font-family: Pixelify Sans;
+   width: 100px;
+   font-family: Pixelify Sans;
 }
 
 #main_sign_in_button {
-  padding: 5px;
+   padding: 5px;
 }
 
 #main_sign_in_button button {
-  border-radius: 50px;
-  font-family: Pixelify Sans;
-  border-style: solid;
-  border-color: black;
+   border-radius: 50px;
+   font-family: Pixelify Sans;
+   border-style: solid;
+   border-color: black;
 }
 
 /* Ephraim's css end */
