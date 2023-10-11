@@ -86,23 +86,46 @@ label {
    gap: 20px;  /* Creates spacing between the elements */
 }
 
-#footer-logo {
-   height: 80%;  /* Adjust according to your needs */
-   margin-right: 20px;  /* Space after the logo */
+.footer-content {
+   display: flex;
+   font-family: Pixelify Sans;
+   align-items: center;
+   gap: 20px;  /* Provides spacing between the items */
 }
+
+
 
 #footer a {
    text-decoration: none;  /* Removes the underline */
+   font-family: Pixelify Sans;
    color: white;  /* Makes link text white */
    margin: 0 10px;  /* Adds some spacing around each link */
    transition: color 0.2s;  /* Adds a smooth transition on hover */
 }
 
-#footer a:hover {
-   color: #ddd;  /* Slightly lightens the link on hover */
+
+
+#footer {
+   
+   justify-content: space-between;  
+   padding-right: 30px;  /* Adjust this value to push icons more to the right */
 }
 
+.footer-icons {
+    display: flex;
+    align-items: center;
+    gap: 50px;  /* Increase this value to add more space between icons */
+}
 
+.footer-icons a {
+    text-decoration: none;  
+    color: white;  
+    transition: color 0.2s; 
+}
+
+.footer-icons a:hover {
+    color: #ddd;  
+}
 
 
 
