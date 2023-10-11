@@ -1,10 +1,10 @@
 /* Reusable variable declaration*/
-:root {
-   /* 
+/* :root { */
+/* 
   Example:
   --main-color: red;
   */
-}
+/* } */
 
 /*
   css variable declaration and use:
@@ -17,11 +17,3 @@
   background-color: var(--main-bg);
 }
 */
-
-/* Reusable variable declaration*/
-:root {
-   /* 
-  Example:
-  --main-color: red;
-  */
-}
