@@ -34,17 +34,43 @@
 
 #main_user_interaction {
    display: flex;
-   height: 100vh;
+   height: 80vh;
+   width: 100vw;
    flex-direction: column;
    justify-content: center;
    align-items: center;
+
 }
 
-.main_text_box {
+.main_logo {
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-start;
+   height: 40%;
+}
+
+.main_teetotee {
+   font-family: Pixelify Sans;
+   font-size: 4rem;
+   text-align: center;
+}
+
+.main_text_boxes {
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-start;
+   height: 50%;
+}
+
+
+.main_text_box1,
+.main_text_box2,
+.main_text_box3 {
    display: flex;
    padding: 5px;
 }
 
+.main_text_box_search,
 .main_text_box_username,
 .main_text_box_password {
    border-radius: 50px;
@@ -62,6 +88,7 @@ label {
 
 #main_sign_in_button {
    padding: 5px;
+   text-align: center;
 }
 
 #main_sign_in_button button {
