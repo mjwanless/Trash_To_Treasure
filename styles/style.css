@@ -1,1 +1,27 @@
+/* Reusable variable declaration*/
+:root {
+   /* 
+  Example:
+  --main-color: red;
+  */
+}
 
+/*
+  css variable declaration and use:
+
+.cool-div {
+  --main-bg: red;
+}
+
+.cool-paragraph {
+  background-color: var(--main-bg);
+}
+*/
+
+/* Reusable variable declaration*/
+:root {
+   /* 
+  Example:
+  --main-color: red;
+  */
+}
