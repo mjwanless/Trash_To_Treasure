@@ -72,3 +72,38 @@ label {
 }
 
 /* Ephraim's css end */
+
+/* Sebastian's css Start */
+#footer {
+   background-color: grey;
+   height: 10vh;
+   border-top: 2px black solid;
+   display: flex;
+   align-items: center;
+   justify-content: flex-start;  
+   padding-left: 20px;  
+   color: white;
+   gap: 20px;  /* Creates spacing between the elements */
+}
+
+#footer-logo {
+   height: 80%;  /* Adjust according to your needs */
+   margin-right: 20px;  /* Space after the logo */
+}
+
+#footer a {
+   text-decoration: none;  /* Removes the underline */
+   color: white;  /* Makes link text white */
+   margin: 0 10px;  /* Adds some spacing around each link */
+   transition: color 0.2s;  /* Adds a smooth transition on hover */
+}
+
+#footer a:hover {
+   color: #ddd;  /* Slightly lightens the link on hover */
+}
+
+
+
+
+
+/* Sebastian's css End */
