@@ -29,16 +29,28 @@
 /* Ephraim's css start */
 
 #main_user_interaction {
-    box-sizing: border-box;
-}
-
-#main_user_interaction {
     display: flex;
     height: 80vh;
     /* width: 100vw; */
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
+}
+
+#main_user_interaction a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.home-screen-button {
+    padding: 30px 120px;
+    background-color: lightgray;
+}
+
+#home-screen-button3,
+#home-screen-button4 {
+    padding: 30px 85px;
 }
 
 .main_logo {
@@ -116,6 +128,7 @@ label {
 .footer-content {
     display: flex;
     font-family: Pixelify Sans;
+    justify-content: space-between;
     align-items: center;
     gap: 20px;
     /* Provides spacing between the items */
@@ -131,11 +144,6 @@ label {
     /* Adds some spacing around each link */
     transition: color 0.2s;
     /* Adds a smooth transition on hover */
-}
-
-#footer {
-    /* justify-content: space-between; */
-    /* Adjust this value to push icons more to the right */
 }
 
 .footer-icons {
@@ -154,5 +162,3 @@ label {
 .footer-icons a:hover {
     color: #ddd;
 }
-
-/* Sebastian's css End */
