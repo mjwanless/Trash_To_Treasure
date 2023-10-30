@@ -15,17 +15,6 @@
     font-size: 8vh;
 }
 
-#main-container {
-    background-color: beige;
-    height: 80vh;
-}
-
-#footer {
-    background-color: grey;
-    height: 10vh;
-    border-top: 2px black solid;
-}
-
 #main_user_interaction {
     display: flex;
     height: 80vh;
@@ -45,11 +34,7 @@
     background-color: lightgray;
 }
 
-#favourites-button {
-    padding: 30px 87px;
-}
-
-#previous-button {
+#favourites-button, #previous-button {
     padding: 30px 87px;
 }
 
@@ -95,34 +80,11 @@
     color: white;
 }
 
-.footer-content {
-    display: flex;
-    font-family: Pixelify Sans;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px;
-}
-
-#footer a {
-    text-decoration: none;
-    font-family: Pixelify Sans;
-    color: white;
+.footer-logo {
     margin: 0 10px;
     transition: color 0.2s;
 }
 
-.footer-icons {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.footer-icons a {
-    text-decoration: none;
-    color: white;
-    transition: color 0.2s;
-}
-
-.footer-icons a:hover {
+.footer-logo:hover {
     color: #ddd;
 }
