@@ -35,9 +35,12 @@
 }
 
 #favourites-button, #previous-button {
-    padding: 30px 87px;
+    padding: 30px 90px;
 }
 
+#previous-button, #previous-button {
+    padding: 30px 90px;
+}
 #image-preview {
     width: 275px;
     height: 275px;
@@ -51,11 +54,15 @@
     width: fit-content;
 }
 
-#depot-locations-select {
-    padding: 10px;
+/* Increase padding and font size for dropdown buttons to make them bigger */
+#depot-locations-select, #favourites-select, #previous-select {
+    width: 285px;  
+    border-radius: 10px;  
+    border: 1px solid black;  
+    padding: 24px;  
     font-weight: bold;
+    font-size: 1.3em;  
     background-color: lightgray;
-    border: none;
     cursor: pointer;
     appearance: none;
     -webkit-appearance: none;
@@ -63,9 +70,16 @@
     background-image: url('path_to_your_dropdown_arrow_image.png');
     background-repeat: no-repeat;
     background-position: 95% center;
-    padding-right: 30px;
+    padding-right: 40px;  
+    text-align: center; 
+    line-height: 1em;   
 }
 
+/* Add margin to the dropdown containers to space them out vertically */
+#locations-dropdown, #favourites-dropdown, #previous-dropdown {
+    width: fit-content;
+    margin-bottom: 2em;  /* Spacing them out vertically */
+}
 #depot-locations-select:focus {
     outline: none;
 }
