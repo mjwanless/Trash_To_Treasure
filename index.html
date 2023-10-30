@@ -25,6 +25,8 @@
         <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
         <script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script>
         <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css" />
+        <script src="./scripts/firebaseAPI_DTC13.js"></script>
+        <script src="./scripts/authentication.js"></script>
     </head>
 
     <body>
@@ -54,7 +56,7 @@
                         <label for=".main_text_box_search">Search:</label>
                         <input class="main_text_box_search" type="text" />
                     </div>
-                    <div class="main_text_box2">
+                    <!-- <div class="main_text_box2">
                         <label for=".main_text_box_username">Username:</label>
                         <input class="main_text_box_username" type="text" />
                     </div>
@@ -64,8 +66,9 @@
                     </div>
                     <div id="main_sign_in_button">
                         <button type="button">Sign In</button>
-                    </div>
+                    </div> -->
                 </div>
+                <div id="firebaseui-auth-container"></div>
             </div>
         </main>
         <!-- Ephraim end -->
