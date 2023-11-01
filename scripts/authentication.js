@@ -8,11 +8,11 @@ var uiConfig = {
             // or whether we leave that to developer to handle.
             return true;
         },
-        uiShown: function () {
-            // The widget is rendered.
-            // Hide the loader.
-            document.getElementById('loader').style.display = 'none';
-        }
+        // uiShown: function () {
+        //     // The widget is rendered.
+        //     // Hide the loader.
+        //     document.getElementById('loader').style.display = 'none';
+        // }
     },
     // Will use popup for IDP Providers sign-in flow instead of the default, redirect.
     signInFlow: 'popup',

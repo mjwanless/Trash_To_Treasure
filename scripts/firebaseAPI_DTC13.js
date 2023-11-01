@@ -7,7 +7,7 @@ var firebaseConfig = {
     projectId: "comp-1800-group-project",
     storageBucket: "comp-1800-group-project.appspot.com",
     messagingSenderId: "400433726157",
-    appId: "1:400433726157:web:598065e5e8565fc80e9f84"
+    appId: "1:400433726157:web:ecf633587d57e5530e9f84"
 };
 
 //--------------------------------------------
