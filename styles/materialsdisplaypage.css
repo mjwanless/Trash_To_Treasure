@@ -35,23 +35,29 @@
     flex-direction: column;
 }
 
-.materials-display-element {
-    border: 2px purple solid;
-}
-
 #materials-display-top {
     display: flex;
+    margin-bottom: 20px;
+}
+
+.materials-display-element-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 10px;
 }
 
 #materials-display-image {
-    width: 200px;
-    height: 200px;
-    background-color: red;
+    width: 175px;
+    height: 175px;
+    background-color: lightgray;
+    margin: 20px;
 }
 
 #materials-tech-info {
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
 }
 
 #materials-type {
@@ -66,10 +72,39 @@
     display: flex;
 }
 
+#materials-details {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+#materials-detail-fields {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.title-field {
+    margin-right: 20px;
+}
+
 .recyclable-checkbox {
-    width: 40px;
-    height: 40px;
-    border: 1px black solid;
+    width: 30px;
+    height: 30px;
+
+    background-color: lightgray;
+}
+
+#details-field {
+    width: 90vw;
+    height: 100px;
+    background-color: lightgray;
+}
+
+.recyclable-textbox {
+    width: 100px;
+    height: 30px;
+
     background-color: lightgray;
 }
 
