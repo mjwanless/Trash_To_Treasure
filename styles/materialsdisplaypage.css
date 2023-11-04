@@ -46,6 +46,11 @@
     align-items: center;
     margin-right: 10px;
 }
+.materials-display-element-bottom {
+    display: flex;
+    flex-direction: column;
+    margin-right: 10px;
+}
 
 #materials-display-image {
     width: 175px;
@@ -76,6 +81,7 @@
     display: flex;
     flex-direction: column;
     margin: auto;
+    margin-bottom: 30px;
 }
 
 #materials-detail-fields {
@@ -88,6 +94,10 @@
     margin-right: 20px;
 }
 
+.title-field-bottom {
+    margin-left: 15px;
+}
+
 .recyclable-checkbox {
     width: 30px;
     height: 30px;
@@ -95,10 +105,23 @@
     background-color: lightgray;
 }
 
-#details-field {
+.details-field {
     width: 90vw;
     height: 100px;
     background-color: lightgray;
+}
+
+.details-field-where {
+    width: 90vw;
+    height: 40px;
+    background-color: lightgray;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+#materials-where-to-recycle-1,
+#materials-where-to-recycle-2,
+#materials-where-to-recycle-3 {
 }
 
 .recyclable-textbox {
