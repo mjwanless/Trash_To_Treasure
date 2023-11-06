@@ -16,6 +16,9 @@ function display_recycling_information(collection) {
             console.log(metal_data["recyclable"])
             $("#recyclable-textbox").html(metal_data["recyclable"])
 
+            completedImgTag = `<img src="${metal_data["img_alt"]}" alt="">`
+            $("#materials-display-image").html(completedImgTag)
+
 
         })
 }
