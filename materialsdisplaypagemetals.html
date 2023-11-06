@@ -1,89 +1,139 @@
 <!DOCTYPE html>
 
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="robots" content="index, follow" />
+   <head>
+      <meta charset="utf-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="robots" content="index, follow" />
 
-        <title>Trash to treasure</title>
+      <title>Trash to treasure</title>
 
-        <meta name="Description" content="DTC team 13 mobile-first recycling app" />
-        <meta name="Author" content="Malcolm Wanless" />
+      <meta
+         name="Description"
+         content="DTC team 13 mobile-first recycling app"
+      />
+      <meta name="Author" content="Malcolm Wanless" />
 
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;500;600;700&display=swap" />
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-        <link rel="stylesheet" href="./styles/reset.css" />
-        <link rel="stylesheet" href="./styles/materialsdisplaypage.css" />
-        <!-- firebase/firestore stuff -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script>
-        <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css" />
-    </head>
+      <link
+         rel="stylesheet"
+         href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;500;600;700&display=swap"
+      />
+      <link
+         rel="stylesheet"
+         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+      />
+      <link rel="stylesheet" href="./styles/reset.css" />
+      <link rel="stylesheet" href="./styles/materialsdisplaypage.css" />
+      <!-- firebase/firestore stuff -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script>
+      <link
+         type="text/css"
+         rel="stylesheet"
+         href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css"
+      />
+   </head>
 
-    <body>
-        <header>
-            <nav id="navbar">
-                <div id="navbar-left">
-                    <span class="material-symbols-outlined" id="compost-id">compost</span>
-                </div>
-                <div id="navbar-right">
-                    <span class="material-symbols-outlined" id="burger-menu">menu</span>
-                </div>
-            </nav>
-        </header>
-
-        <main>
-            <div id="main_user_interaction">
-                <div class="materials-display-element" id="materials-display-top">
-                    <div class="materials-display-element" id="materials-display-image"></div>
-                    <div id="materials-tech-info">
-                        <div class="materials-display-element-top" id="materials-type">
-                            <p class="title-field">Type:</p>
-                            <div class="recyclable-textbox" id="type-textbox"></div>
-                        </div>
-                        <div class="materials-display-element-top" id="materials-name">
-                            <p class="title-field">Name:</p>
-                            <div class="recyclable-textbox" id="name-textbox"></div>
-                        </div>
-                        <div class="materials-display-element-top" id="materials-recyclable">
-                            <p class="title-field">Recyclable?</p>
-                            <div class="recyclable-checkbox" id="recyclable-textbox"></div>
-                        </div>
-                    </div>
-                </div>
-                <div id="materials-detail-fields">
-                    <div class="materials-display-element" id="materials-details">
-                        <p class="title-field">Details:</p>
-                        <div class="details-field"></div>
-                    </div>
-                    <div class="materials-display-element-bottom" id="materials-where-to-recycle-1">
-                        <p class="title-field-bottom">Where to dispose:</p>
-                        <div class="details-field-where"></div>
-                    </div>
-                    <div class="materials-display-element-bottom" id="materials-where-to-recycle-2">
-                        <p class="title-field-bottom">Where to dispose:</p>
-                        <div class="details-field-where"></div>
-                    </div>
-                    <div class="materials-display-element-bottom" id="materials-where-to-recycle-3">
-                        <p class="title-field-bottom">Where to dispose:</p>
-                        <div class="details-field-where"></div>
-                    </div>
-                </div>
+   <body>
+      <header>
+         <nav id="navbar">
+            <div id="navbar-left">
+               <span class="material-symbols-outlined" id="compost-id"
+                  >compost</span
+               >
             </div>
-        </main>
+            <div id="navbar-right">
+               <span class="material-symbols-outlined" id="burger-menu"
+                  >menu</span
+               >
+            </div>
+         </nav>
+      </header>
 
-        <footer id="footer">
-            <img src="images/icons8-home-48.png" alt="" class="footer-logo" />
-            <img src="images/icons8-instagram-50.png" alt="" class="footer-logo" />
-            <img src="images/icons8-facebook-48.png" alt="" class="footer-logo" />
-            <img src="images/icons8-twitter-50.png" alt="" class="footer-logo" />
-        </footer>
-        <script src="scripts/firebaseAPI_DTC13.js"></script>
-        <script src="scripts/database_st.js"></script>
-    </body>
+      <main>
+         <div id="main_user_interaction">
+            <div class="materials-display-element" id="materials-display-top">
+               <div
+                  class="materials-display-element"
+                  id="materials-display-image"
+               ></div>
+               <div id="materials-tech-info">
+                  <div
+                     class="materials-display-element-top"
+                     id="materials-type"
+                  >
+                     <p class="title-field">Type:</p>
+                     <div class="recyclable-textbox" id="type-textbox"></div>
+                  </div>
+                  <div
+                     class="materials-display-element-top"
+                     id="materials-name"
+                  >
+                     <p class="title-field">Name:</p>
+                     <div class="recyclable-textbox" id="name-textbox"></div>
+                  </div>
+                  <div
+                     class="materials-display-element-top"
+                     id="materials-recyclable"
+                  >
+                     <p class="title-field">Recyclable?</p>
+                     <div
+                        class="recyclable-checkbox"
+                        id="recyclable-textbox"
+                     ></div>
+                  </div>
+               </div>
+            </div>
+            <div id="materials-detail-fields">
+               <div class="materials-display-element" id="materials-details">
+                  <p class="title-field">Details:</p>
+                  <div class="details-field"></div>
+               </div>
+               <div
+                  class="materials-display-element-bottom"
+                  id="materials-where-to-recycle-1"
+               >
+                  <p class="title-field-bottom">Where to dispose:</p>
+                  <div
+                     class="details-field-where"
+                     id="details-field-where-1"
+                  ></div>
+               </div>
+               <div
+                  class="materials-display-element-bottom"
+                  id="materials-where-to-recycle-2"
+               >
+                  <p class="title-field-bottom">Where to dispose:</p>
+                  <div
+                     class="details-field-where"
+                     id="details-field-where-2"
+                  ></div>
+               </div>
+               <div
+                  class="materials-display-element-bottom"
+                  id="materials-where-to-recycle-3"
+               >
+                  <p class="title-field-bottom">Where to dispose:</p>
+                  <div
+                     class="details-field-where"
+                     id="details-field-where-3"
+                  ></div>
+               </div>
+            </div>
+         </div>
+      </main>
+
+      <footer id="footer">
+         <img src="images/icons8-home-48.png" alt="" class="footer-logo" />
+         <img src="images/icons8-instagram-50.png" alt="" class="footer-logo" />
+         <img src="images/icons8-facebook-48.png" alt="" class="footer-logo" />
+         <img src="images/icons8-twitter-50.png" alt="" class="footer-logo" />
+      </footer>
+      <script src="scripts/firebaseAPI_DTC13.js"></script>
+      <script src="scripts/database_st.js"></script>
+   </body>
 </html>
