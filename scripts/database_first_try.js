@@ -4,6 +4,7 @@ function display_recycling_information(collection) {
         .get()
         .then(doc => {
             glass_data = doc.data().glass;
+            
             console.log(glass_data["type"])
             $("#type-textbox").html(glass_data["type"])
 
@@ -15,6 +16,9 @@ function display_recycling_information(collection) {
 
             console.log(glass_data["recyclable"])
             $("#recyclable-textbox").html(glass_data["recyclable"])
+
+            completedImgTag = `<img src="${glass_data["img_alt"]}" alt="">`
+            $("#materials-display-image").html(completedImgTag)
         })
 }
 
