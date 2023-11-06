@@ -1,37 +1,29 @@
 function display_recycling_information(collection) {
     db.collection(collection)
-        .doc("glass")
+        .doc("plastic")
         .get()
-        .then(doc => {
-            glass_data = doc.data().glass;
-            console.log(glass_data["type"])
-            $("#type-textbox").html(glass_data["type"])
-
-            console.log(glass_data["description"])
-            $(".details-field").html(glass_data["description"])
-
-            console.log(glass_data["name"])
-            $("#name-textbox").html(glass_data["name"])
-
-            console.log(glass_data["recyclable"])
-            $("#recyclable-textbox").html(glass_data["recyclable"])
-
-            console.log(glass_data)
-
-        //     anthonyhelp = doc.data().test;
-        //     console.log(anthonyhelp["nest1"][0])
-        })
+        .then((doc) => {
+            plastic_data = doc.data().plastic;
+            $("#type-textbox").html(plastic_data["type"]);
+            $(".details-field").html(plastic_data["description"]);
+            $("#name-textbox").html(plastic_data["name"]);
+            $("#recyclable-textbox").html(plastic_data["recyclable"]);
+        });
 }
 
 function display_depot_locations(collection) {
     db.collection(collection)
-        .doc("5oHNEmdKpdoAQmPM7ff1")
+        .doc("depot_locations")
         .get()
-        .then(doc => {
-            depot_data = doc.data().placeholder;
-            console.log(depot_data)
-        })
+        .then((doc) => {
+            depot1_data = doc.data().capital_salvage;
+            depot2_data = doc.data().go_green_bottle_depot_and_recycling;
+            depot3_data = doc.data().north_shore_recycling_and_waste_centre;
+            $("#details-field-where-1").html(depot1_data["address"]);
+            $("#details-field-where-2").html(depot2_data["address"]);
+            $("#details-field-where-3").html(depot3_data["address"]);
+        });
 }
 
 display_recycling_information("materials");
-display_depot_locations("locations")
+display_depot_locations("locations");

@@ -15,23 +15,30 @@ function display_recycling_information(collection) {
 
             console.log(glass_data["recyclable"])
             $("#recyclable-textbox").html(glass_data["recyclable"])
-
-            console.log(glass_data)
-
-        //     anthonyhelp = doc.data().test;
-        //     console.log(anthonyhelp["nest1"][0])
         })
 }
 
 function display_depot_locations(collection) {
     db.collection(collection)
-        .doc("5oHNEmdKpdoAQmPM7ff1")
+        .doc("depot_locations")
         .get()
         .then(doc => {
-            depot_data = doc.data().placeholder;
+            depot_data = doc.data().go_green_bottle_depot_and_recycling["address"];
             console.log(depot_data)
+            $("#location1").html(depot_data)
+            
+            depot_data = doc.data().north_shore_recycling_and_waste_centre["address"];
+            console.log(depot_data)
+            $("#location2").html(depot_data)
+            
+            depot_data = doc.data().una_green_depot["address"];
+            console.log(depot_data)
+            $("#location3").html(depot_data)
         })
 }
 
 display_recycling_information("materials");
 display_depot_locations("locations")
+
+        //     debugg = doc.data().test;
+        //     console.log(debugg["nest1"][0])
