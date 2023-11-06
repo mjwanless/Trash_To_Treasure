@@ -17,7 +17,6 @@ function display_recycling_information(collection) {
             console.log(metal_data["recyclable"])
             $("#recyclable-textbox").html(metal_data["recyclable"])
 
-            console.log(metal_data)
 
         //     anthonyhelp = doc.data().test;
         //     console.log(anthonyhelp["nest1"][0])
@@ -35,7 +34,6 @@ function display_depot_locations(collection) {
             $("#details-field-where-1").html(depot1_data["address"]);
             $("#details-field-where-2").html(depot2_data["address"]);
             $("#details-field-where-3").html(depot3_data["address"]);
-            console.log(depot_data)
         })
 }
 
