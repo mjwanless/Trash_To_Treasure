@@ -1,26 +1,25 @@
 function display_recycling_information_from_database(collection) {
     db.collection(collection)
-        .doc("glass2.0")
+        .doc("glass")
         .get()
         .then(doc => {
-            type = doc.data().type;
-            console.log(type)
-            $("#type-textbox").html(type)
+            glass_data = doc.data().glass;
+            console.log(glass_data["type"])
+            $("#type-textbox").html(glass_data["type"])
 
-            a_name = doc.data().material_name
-            console.log(a_name)
-            $("#name-textbox").html(a_name)
-            
-            recyclable = doc.data().recyclable;
-            console.log(recyclable);
-            $(".recyclable-checkbox").html(recyclable)
+            console.log(glass_data["description"])
+            $(".details-field").html(glass_data["description"])
 
-            material_description = doc.data().description;
-            console.log(material_description);
-            $(".details-field").html(material_description)
-        
-            anthonyhelp = doc.data().test;
-            console.log(anthonyhelp["nest1"][0])
+            console.log(glass_data["name"])
+            $("#name-textbox").html(glass_data["name"])
+
+            console.log(glass_data["recyclable"])
+            $("#recyclable-textbox").html(glass_data["recyclable"])
+
+            console.log(glass_data)
+
+        //     anthonyhelp = doc.data().test;
+        //     console.log(anthonyhelp["nest1"][0])
         })
 }
 // function display_recycling_information_from_database(collection) {
