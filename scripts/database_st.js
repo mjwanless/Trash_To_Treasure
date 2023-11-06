@@ -3,8 +3,7 @@ function display_recycling_information(collection) {
         .doc("metal")
         .get()
         .then(doc => {
-            metal_data = doc.data().metal;
-
+            metal_data = doc.data().copper;
             console.log(metal_data["type"])
             $("#type-textbox").html(metal_data["type"])
 
@@ -20,6 +19,9 @@ function display_recycling_information(collection) {
 
         })
 }
+
+
+
 
 function display_depot_locations(collection) {
     db.collection(collection)
