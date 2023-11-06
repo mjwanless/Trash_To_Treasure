@@ -17,10 +17,24 @@ function display_recycling_information_from_database(collection) {
 
             material_description = doc.data().description;
             console.log(material_description);
-            $(".details-field").html(material_description);
+            $(".details-field").html(material_description)
+        
+            anthonyhelp = doc.data().test;
+            console.log(anthonyhelp["nest1"][0])
         })
 }
+// function display_recycling_information_from_database(collection) {
+//     db.collection(collection)
+//         .doc("5oHNEmdKpdoAQmPM7ff1")
+//         .get()
+//         .then(doc => {
+//             location1 = doc.data().Capital
+//         })
+
+// }
+
 display_recycling_information_from_database("materials");
+// display_recycling_information_from_database("locations");
 
 // function displayHikeInfo() {
 //     let params = new URL(window.location.href); //get URL of search bar
