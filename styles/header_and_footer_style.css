@@ -1,0 +1,17 @@
+#navbar {
+    height: 10vh;
+    border-bottom: 2px black solid;
+    background-color: grey;
+    display: flex;
+    padding: 1vh;
+    justify-content: space-between;
+}
+
+#footer {
+    background-color: grey;
+    height: 10vh;
+    border-top: 2px black solid;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}

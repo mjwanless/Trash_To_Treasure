@@ -146,11 +146,6 @@ label {
     /* Adds a smooth transition on hover */
 }
 
-#footer {
-    /* justify-content: space-between; */
-    /* Adjust this value to push icons more to the right */
-}
-
 .footer-icons {
     display: flex;
     align-items: center;
