@@ -18,7 +18,7 @@
         <link rel="stylesheet" href="styles/reset.css" />
         <link rel="stylesheet" href="styles/header_and_footer_style.css" />
         <link rel="stylesheet" href="styles/style.css" />
-        <link rel="stylesheet" href="./styles/homepagestyle.css" />
+        <link rel="stylesheet" href="./styles/template.css" />
 
         <!-- Firebase related CSS, JS, and JQuery -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -39,17 +39,23 @@
         </header>
         <!-- Navbar placeholder -->
 
-        <!-- Reuse above on new pages -->
-
         <main>
-            <div id="main_user_interaction">
-                <a href="search_first_draft.html" class="home-screen-button" id="home-screen-button1">Search</a>
-                <a href="depot_location.html" class="home-screen-button" id="home-screen-button3">Depot Locations</a>
-                <a href="#" class="home-screen-button" id="home-screen-button4">Other Resources</a>
+            <div id="search-recyclable-function">
+                <input type="text" id="user-recyclables-search" onkeyup="searchfunctionfirstdraft()" placeholder="Search for Recyclable Type..." />
+                <ul id="list-of-recyclables-types">
+                    <li><a href="#">a</a></li>
+                    <li><a href="#">b</a></li>
+                    <li><a href="#">c</a></li>
+                    <li><a href="#">d</a></li>
+                    <li><a href="#">e</a></li>
+                    <li><a href="#">e</a></li>
+                    <li><a href="#">f</a></li>
+                    <li><a href="#">g</a></li>
+                    <li><a href="#">h</a></li>
+                    <li><a href="#">i</a></li>
+                </ul>
             </div>
         </main>
-
-        <!-- Reuse below on new pages -->
 
         <!-- Footer placeholder -->
         <footer id="footer-container">
@@ -57,5 +63,6 @@
         </footer>
         <!-- Footer placeholder -->
         <script src="./scripts/skeleton.js"></script>
+        <script src="./scripts/search-first-draft.js"></script>
     </body>
 </html>
