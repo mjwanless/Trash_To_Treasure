@@ -1,0 +1,23 @@
+* {
+    box-sizing: border-box;
+}
+
+#main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    min-width: 40vw;
+    min-height: 15vh;
+}
+
