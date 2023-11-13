@@ -13,12 +13,14 @@
         <meta name="Author" content="Team DTC-13" />
 
         <!-- CSS -->
+        <!-- External CSS and fonts links for styling and iconography -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;500;600;700&display=swap" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-        <link rel="stylesheet" href="styles/reset.css" />
-        <link rel="stylesheet" href="styles/header_and_footer_style.css" />
-        <link rel="stylesheet" href="styles/style.css" />
-        <link rel="stylesheet" href="./styles/depot.css" />
+        <link rel="stylesheet" href="styles/reset.css" /> <!-- Reset CSS for browser consistency -->
+        <link rel="stylesheet" href="styles/header_and_footer_style.css" /> <!-- Header and footer specific styles -->
+        <link rel="stylesheet" href="styles/style.css" /> <!-- Main stylesheet -->
+        <link rel="stylesheet" href="./styles/depot.css" /> <!-- Additional styles for depot-specific elements -->
+
 
         <!-- Firebase related CSS, JS, and JQuery -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -28,22 +30,25 @@
         <script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script>
         <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css" />
         <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
-        <script src="./scripts/firebaseAPI_DTC13.js"></script>
-        <script src="./scripts/authentication.js"></script>
+        <script src="./scripts/firebaseAPI_DTC13.js"></script> <!-- Firebase initialization -->
+        <script src="./scripts/authentication.js"></script> <!-- User authentication script -->
     </head>
 
     <body>
-        <!-- Navbar placeholder -->
+        <!-- Header with navigation bar placeholder -->
         <header id="navbar-container">
             <nav id="navbar-placeholder"></nav>
         </header>
         <!-- Navbar placeholder -->
 
+        <!-- Main content section -->
         <main>
             <div id="main_user_interaction">
                 <div id="image-preview">
                     <img src="images/depot.png" alt="Depot Image" />
                 </div>
+
+                <!-- Dropdown for selecting depot locations -->
                 <div id="locations-dropdown">
                     <select id="depot-locations-select">
                         <option value="" disabled selected>Nearby</option>
@@ -60,7 +65,7 @@
                     </select>
                 </div>
 
-                <!-- Favourites Dropdown -->
+                <!-- Dropdown for selecting favourite depots -->
                 <div id="favourites-dropdown">
                     <select id="favourites-select">
                         <option value="" disabled selected>Favourite</option>
@@ -70,7 +75,7 @@
                     </select>
                 </div>
 
-                <!-- Previous Dropdown -->
+                <!-- Dropdown for previously selected depots -->
                 <div id="previous-dropdown">
                     <select id="previous-select">
                         <option value="" disabled selected>Previous</option>
@@ -82,11 +87,13 @@
             </div>
         </main>
 
-        <!-- Footer placeholder -->
+        <!-- Footer with placeholder for additional navigation or information -->
         <footer id="footer-container">
             <nav id="footer-placeholder"></nav>
         </footer>
         <!-- Footer placeholder -->
+
+        <!-- Additional JavaScript file for page functionality -->
         <script src="./scripts/skeleton.js"></script>
     </body>
 </html>
