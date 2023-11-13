@@ -3,35 +3,35 @@ function redirect_user_to_display_material_information() {
 }
 
 function store_subcategory_1_in_local_storage() {
-    var subcategory = 'subcategory_1';
+    var subcategory = document.getElementsByClassName("button0")[0].innerHTML;
     localStorage.setItem('user_selected_subcategory', subcategory)
 }
 function store_subcategory_2_in_local_storage() {
-    var subcategory = 'subcategory_2';
+    var subcategory = document.getElementsByClassName("button0")[0].innerHTML;
     localStorage.setItem('user_selected_subcategory', subcategory)
 }
 function store_subcategory_3_in_local_storage() {
-    var subcategory = 'subcategory_3';
+    var subcategory = document.getElementsByClassName("button0")[0].innerHTML;
     localStorage.setItem('user_selected_subcategory', subcategory)
 }
 function store_subcategory_4_in_local_storage() {
-    var subcategory = 'subcategory_4';
+    var subcategory = document.getElementsByClassName("button0")[0].innerHTML;
     localStorage.setItem('user_selected_subcategory', subcategory)
 }
 function store_subcategory_5_in_local_storage() {
-    var subcategory = 'subcategory_5';
+    var subcategory = document.getElementsByClassName("button0")[0].innerHTML;
     localStorage.setItem('user_selected_subcategory', subcategory)
 }
 function store_subcategory_6_in_local_storage() {
-    var subcategory = 'subcategory_6';
+    var subcategory = document.getElementsByClassName("button0")[0].innerHTML;
     localStorage.setItem('user_selected_subcategory', subcategory)
 }
 function store_subcategory_7_in_local_storage() {
-    var subcategory = 'subcategory_6';
+    var subcategory = document.getElementsByClassName("button0")[0].innerHTML;
     localStorage.setItem('user_selected_subcategory', subcategory)
 }
 function store_subcategory_8_in_local_storage() {
-    var subcategory = 'subcategory_8';
+    var subcategory = document.getElementsByClassName("button0")[0].innerHTML;
     localStorage.setItem('user_selected_subcategory', subcategory)
 }
 

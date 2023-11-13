@@ -2,9 +2,9 @@ const user_selected_subcategory = localStorage.getItem("user_selected_subcategor
 
 function dynamically_load_correct_script() {
     console.log(user_selected_subcategory)
-    if (user_selected_subcategory == 'subcategory_1') {
+    if (user_selected_subcategory == 'stainless steel') {
         var added_script = document.createElement('script')
-        added_script.src = ".js"
+        added_script.src = "scripts/display_stainless_steel_information.js"
         document.body.appendChild(added_script)
     }
     if (user_selected_subcategory == 'subcategory_2') {
