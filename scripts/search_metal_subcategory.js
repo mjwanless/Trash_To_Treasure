@@ -18,7 +18,7 @@ function display_material_subcategories(collection, category) {
 
             // Iterating through the ordered fields to display each subcategory
             for (i = 0; i <= ordered_fields.length; i++)
-            // Updating the HTML of elements with class `buttonX` where X is the index
+                // Updating the HTML of elements with class `buttonX` where X is the index
                 // Also, replacing underscores with spaces for better readability
                 $(`.button${i}`).html(ordered_fields[i].replace("_", " "))
         })
