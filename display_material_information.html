@@ -37,13 +37,16 @@
             </nav>
         </header>
 
+        <!-- Main content area for user interaction and material information display -->
         <main>
             <div id="main_user_interaction">
                 <div class="materials-display-element" id="materials-display-top">
                     <div class="materials-display-element" id="materials-display-image">
                         <img src="" alt="">
                     </div>
+                    <!-- Technical information about the material -->
                     <div id="materials-tech-info">
+                        <!-- Display area for material type, name, and recyclability -->
                         <div class="materials-display-element-top" id="materials-type">
                             <p class="title-field">Type:</p>
                             <div class="recyclable-textbox" id="type-textbox"></div>
@@ -58,6 +61,7 @@
                         </div>
                     </div>
                 </div>
+                <!-- Detailed information section for the material, including disposal locations -->
                 <div id="materials-detail-fields">
                     <div class="materials-display-element" id="materials-details">
                         <p class="title-field">Details:</p>
@@ -78,10 +82,11 @@
                 </div>
             </div>
         </main>
-
+        <!-- Footer section -->
         <footer id="footer">
             <nav id="footer-placeholder"></nav>
         </footer>
+        <!-- Scripts for Firebase API and dynamic loading of material data -->
         <script src="scripts/firebaseAPI_DTC13.js"></script>
         <script id="dynamically_load_a_script" src="scripts/load_materials.js"></script>
     </body>
