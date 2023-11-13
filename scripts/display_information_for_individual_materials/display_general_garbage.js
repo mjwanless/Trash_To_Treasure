@@ -1,41 +1,50 @@
+// Function to display recycling information about a specific material.
 function display_recycling_information(collection) {
+    // Accessing the database collection specified by the argument.
     db.collection(collection)
         .doc("garbage")
         .get()
         .then(doc => {
             material_data = doc.data().general_garbage;
             
+            // Logging and displaying the type of material.
             console.log(material_data["type"])
             $("#type-textbox").html(material_data["type"])
 
+            // Logging and displaying the description of the material.
             console.log(material_data["description"])
             $(".details-field").html(material_data["description"])
 
+            // Logging and formatting the material's name to replace underscores with spaces.
             console.log(material_data["name"])
             var material_name = material_data["name"]
             var no_underscores = material_name.replace("_", " ")
             $("#name-textbox").html(no_underscores)
 
+            // Logging and displaying if the material is recyclable.
             console.log(material_data["recyclable"])
             $("#recyclable-textbox").html(material_data["recyclable"])
 
+            // Constructing an image tag and displaying the image related to the material.
             completedImgTag = `<img src="${material_data["img_alt"]}" alt="">`
             $("#materials-display-image").html(material_data)
         })
 }
 
+// Functions to display the location of various recycling depots.
 function display_depot_location1(collection) {
     db.collection(collection)
-        .doc("go_green_bottle_depot_and_recycling")
+        .doc("go_green_bottle_depot_and_recycling") // Accessing specific depot document.
         .get()
         .then(doc => {
-            depot_data = doc.data().address;
+            depot_data = doc.data().address; // Retrieving the address.
             console.log(depot_data)
-            $("#location1").html(depot_data)
+            $("#location1").html(depot_data) // Displaying the address in the specified element.
         })
 }
 
 function display_depot_location2(collection) {
+    // Similar to display_depot_location1, but for a different depot.
     db.collection(collection)
         .doc("north_shore_recycling_and_waste_centre")
         .get()
@@ -47,6 +56,7 @@ function display_depot_location2(collection) {
 }
 
 function display_depot_location3(collection) {
+    // Similar to display_depot_location1 and display_depot_location2, but for another depot.
     db.collection(collection)
         .doc("capital_salvage")
         .get()
@@ -57,7 +67,7 @@ function display_depot_location3(collection) {
         })
 }
 
-
+// Calling the functions to display the recycling information and depot locations.
 display_recycling_information("materials");
 display_depot_location1("locations");
 display_depot_location2("locations");
