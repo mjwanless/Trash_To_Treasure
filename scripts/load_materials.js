@@ -8,7 +8,7 @@ function dynamically_load_correct_script() {
     // Check if the selected subcategory is 'stainless steel'.
     if (user_selected_subcategory == 'stainless steel') {
         var added_script = document.createElement('script')
-        added_script.src = "scripts/display_stainless_steel_information.js"
+        added_script.src = "scripts/display_information_for_individual_materials/display_stainless_steel.js"
         document.body.appendChild(added_script)
     }
 
