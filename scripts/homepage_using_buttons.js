@@ -57,4 +57,12 @@ function displayNameFromFirestore() {
     })
 }
 
+// just a test function to help me understand getting the user ID
+function testconsoleloguserid() {
+    firebase.auth().onAuthStateChanged(user => {
+        if (user) {
+            console.log(user.uid)
+}})}
+
 displayNameFromFirestore();
+testconsoleloguserid();
