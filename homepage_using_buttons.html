@@ -26,11 +26,9 @@
         <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
         <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
         <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script>
         <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css" />
         <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
         <script src="./scripts/firebaseAPI_DTC13.js"></script> <!-- Script for initializing Firebase API -->
-        <script src="./scripts/authentication.js"></script> <!-- Script for handling user authentication -->
     </head>
 
     <body>
@@ -44,9 +42,9 @@
         <div id="main-container">
             <div id="buttons">
                 <!-- Buttons linking to different pages of the app -->
-                <a href="material_categories.html"><button>Search</button></a>
-                <a href="depot_location.html"><button>Depot Locations</button></a>
-                <a href=""><button>Other Resources</button></a>
+                <button class="search_button">Search</button>
+                <button class="depot_locations_button">Depot Locations</button>
+                <button class="other_resources_button">Other Resources</button>
                 <button class="profile_button">Profile</button>
             </div>
         </div>
