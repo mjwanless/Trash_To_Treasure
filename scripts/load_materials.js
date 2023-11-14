@@ -52,14 +52,14 @@ function dynamically_load_correct_script() {
         document.body.appendChild(added_script)
     }
 
-    //script for displaying garbage subcategory
+    // Script for displaying garbage subcategory
     if (user_selected_subcategory == 'general garbage') {
         var added_script = document.createElement('script')
         added_script.src = "scripts/display_information_for_individual_materials/garbage/display_general_garbage.js"
         document.body.appendChild(added_script)
     }
 
-    //scrips for displaying glass subcategories
+    // Scripts for displaying glass subcategories
     if (user_selected_subcategory == 'glass') {
         var added_script = document.createElement('script')
         added_script.src = "scripts/display_information_for_individual_materials/glass/display_glass.js"
@@ -68,6 +68,33 @@ function dynamically_load_correct_script() {
     if (user_selected_subcategory == 'stained glass') {
         var added_script = document.createElement('script')
         added_script.src = "scripts/display_information_for_individual_materials/glass/display_stained_glass.js"
+        document.body.appendChild(added_script)
+    }
+
+    // Scripts for displaying hazardous subcategories
+    if (user_selected_subcategory == 'batteries') {
+        var added_script = document.createElement('script')
+        added_script.src = "scripts/display_information_for_individual_materials/hazardous/display_batteries.js"
+        document.body.appendChild(added_script)
+    }
+    if (user_selected_subcategory == 'oils') {
+        var added_script = document.createElement('script')
+        added_script.src = "scripts/display_information_for_individual_materials/hazardous/display_oils.js"
+        document.body.appendChild(added_script)
+    }if (user_selected_subcategory == 'paints') {
+        var added_script = document.createElement('script')
+        added_script.src = "scripts/display_information_for_individual_materials/hazardous/display_paints.js"
+        document.body.appendChild(added_script)
+    }
+
+    // Scripts for displaying plastic subcategories
+    if (user_selected_subcategory == 'plastic') {
+        var added_script = document.createElement('script')
+        added_script.src = "scripts/display_information_for_individual_materials/plastic/display_plastic.js"
+        document.body.appendChild(added_script)
+    }if (user_selected_subcategory == 'soft plastic') {
+        var added_script = document.createElement('script')
+        added_script.src = "scripts/display_information_for_individual_materials/plastic/display_soft_plastic.js"
         document.body.appendChild(added_script)
     }
 }
