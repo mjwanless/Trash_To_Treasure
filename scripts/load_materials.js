@@ -52,8 +52,15 @@ function dynamically_load_correct_script() {
         document.body.appendChild(added_script)
     }
 
-    //script for displaying general garbage subcategory
+    //script for displaying garbage subcategory
     if (user_selected_subcategory == 'general garbage') {
+        var added_script = document.createElement('script')
+        added_script.src = "scripts/display_information_for_individual_materials/garbage/display_general_garbage.js"
+        document.body.appendChild(added_script)
+    }
+
+    //scrips for displaying glass subcategories
+    if (user_selected_subcategory == 'glass') {
         var added_script = document.createElement('script')
         added_script.src = ".js"
         document.body.appendChild(added_script)
