@@ -62,10 +62,14 @@ function dynamically_load_correct_script() {
     //scrips for displaying glass subcategories
     if (user_selected_subcategory == 'glass') {
         var added_script = document.createElement('script')
-        added_script.src = ".js"
+        added_script.src = "scripts/display_information_for_individual_materials/glass/display_glass.js"
         document.body.appendChild(added_script)
     }
-    
+    if (user_selected_subcategory == 'stained glass') {
+        var added_script = document.createElement('script')
+        added_script.src = "scripts/display_information_for_individual_materials/glass/display_stained_glass.js"
+        document.body.appendChild(added_script)
+    }
 }
 
 // Execute the function to load the appropriate script based on the user-selected subcategory.
