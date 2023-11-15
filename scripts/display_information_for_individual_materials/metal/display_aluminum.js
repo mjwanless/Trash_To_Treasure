@@ -20,7 +20,7 @@ function display_recycling_information(collection) {
             $("#recyclable-textbox").html(material_data["recyclable"])
 
             completedImgTag = `<img src="${material_data["img_alt"]}" alt="">`
-            $("#materials-display-image").html(material_data)
+            $("#materials-display-image").html(completedImgTag)
         })
 }
 
