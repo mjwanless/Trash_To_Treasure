@@ -142,7 +142,32 @@ label {
     color: #ddd;
 }
 
+/* Sebastian's css End */
+
+
+
+/* CSS for buttons */
+#main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.main_button {
+    min-width: 40vw;
+    min-height: 15vh;
+}
+
 #home_button {
+    background-color: white;
     max-height: 10vh;
 }
 
@@ -150,4 +175,3 @@ label {
     max-height: 5vh;
 }
 
-/* Sebastian's css End */
