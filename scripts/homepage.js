@@ -5,7 +5,7 @@ function redirect_user_to_depot_locations_page() {
     window.location.href = 'depot_location.html'
 }
 function redirect_user_to_other_resources_page() {
-    //tbd
+    window.location.href = 'other_resources.html'
 }
 function redirect_user_to_profile_page() {
     window.location.href = 'profile.html'
