@@ -26,38 +26,44 @@
         <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
         <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
         <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script>
         <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css" />
         <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
         <script src="./scripts/firebaseAPI_DTC13.js"></script> <!-- Script for initializing Firebase API -->
+        <script src="./scripts/authentication.js"></script> <!-- Script for handling user authentication -->
     </head>
 
     <body>
-        <!-- Header section with a navigation bar placeholder -->
+        <!-- Header section with a placeholder for navigation bar -->
         <header id="navbar-container">
             <nav id="navbar-placeholder"></nav>
         </header>
         <!-- Navbar placeholder -->
 
-        <!-- Main content area with buttons for various features of the app -->
-        <div><p>Hello, <span class="name_goes_here"></span></p></div>
+        <!-- Main content area containing buttons for different subcategories -->
         <div id="main-container">
             <div id="buttons">
-                <!-- Buttons linking to different pages of the app -->
-                <button class="search_button main_button">Search</button>
-                <button class="depot_locations_button main_button">Depot Locations</button>
-                <button class="other_resources_button main_button">Other Resources</button>
-                <button class="profile_button main_button">Profile</button>
+                <!-- Series of buttons, each representing a different subcategory -->
+                <button id="individual_buttons" class="button0 main_button"></button>
+                <button id="individual_buttons" class="button1 main_button"></button>
+                <button id="individual_buttons" class="button2 main_button"></button>
+                <button id="individual_buttons" class="button3 main_button"></button>
+                <button id="individual_buttons" class="button4 main_button"></button>
+                <button id="individual_buttons" class="button5 main_button"></button>
+                <button id="individual_buttons" class="button6 main_button"></button>
+                <button id="individual_buttons" class="button7 main_button"></button>
             </div>
         </div>
 
-        <!-- Footer section with a placeholder for additional navigation or information -->
+        <!-- Footer section with a placeholder for additional content or links -->
         <footer id="footer-container">
             <nav id="footer-placeholder"></nav>
         </footer>
         <!-- Footer placeholder -->
-        
-        <!-- Additional JavaScript file for general page functionality -->
-        <script src="./scripts/skeleton.js"></script>
-        <script src="/scripts/homepage_using_buttons.js"></script>
+
+        <!-- Scripts for loading and managing subcategories -->
+        <script src="./scripts/skeleton.js"></script> <!-- Script for basic page functionality -->
+        <script id="dynamically_load_a_script" src="scripts/load_subcategories.js"></script> <!-- Script to dynamically load subcategories -->
+        <script src="scripts/material_subcategories.js"></script> <!-- Script for handling material subcategory data -->
     </body>
 </html>

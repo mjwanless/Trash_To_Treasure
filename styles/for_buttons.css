@@ -1,4 +1,4 @@
-* {
+/* * {
     box-sizing: border-box;
 }
 
@@ -16,8 +16,15 @@
     align-items: center;
 }
 
-button {
+.main_button {
     min-width: 40vw;
     min-height: 15vh;
 }
+
+#home_button {
+    background-color: red;
+    max-height: 10vh;
+}
+ */
+
 

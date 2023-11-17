@@ -8,13 +8,25 @@ function loadSkeleton() {
             //if the pointer to "user" object is not null, then someone is logged in
             // User is signed in.
             // Do something for the user here.
-            console.log($("#navbar-placeholder").load("./text/nav_after_login.html"));
-            console.log($("#footer-placeholder").load("./text/footer.html"));
+            $("#navbar-placeholder").load("./text/nav_after_login.html");
+            $("#footer-placeholder").load("./text/footer.html");
         } else {
             // No user is signed in.
-            console.log($("#navbar-placeholder").load("./text/nav_before_login.html"));
-            console.log($("#footer-placeholder").load("./text/footer.html"));
+            $("#navbar-placeholder").load("./text/nav_before_login.html");
+            $("#footer-placeholder").load("./text/footer.html");
         }
     });
 }
 loadSkeleton(); //invoke the function
+
+function home_button_redirect() {
+    window.location.href = "./homepage_using_buttons.html";
+}
+
+document.addEventListener("click", function (e) {
+    const home_clicked = e.target.closest("#home_button");
+    if (home_clicked) {
+        console.log("home button clicked");
+        home_button_redirect()
+    }
+});

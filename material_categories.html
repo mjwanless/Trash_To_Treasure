@@ -16,10 +16,13 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;500;600;700&display=swap" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
         <link rel="stylesheet" href="styles/reset.css" />
+        <!-- Reset CSS for consistent styling across browsers -->
         <link rel="stylesheet" href="styles/header_and_footer_style.css" />
+        <!-- Custom styles for header and footer -->
         <link rel="stylesheet" href="styles/style.css" />
-        <link rel="stylesheet" href="styles/for_buttons.css">
-
+        <!-- Main stylesheet for the webpage -->
+        <link rel="stylesheet" href="styles/for_buttons.css" />
+        <!-- Additional styles for buttons -->
 
         <!-- Firebase related CSS, JS, and JQuery -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -30,35 +33,41 @@
         <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css" />
         <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
         <script src="./scripts/firebaseAPI_DTC13.js"></script>
+        <!-- Script for initializing Firebase API -->
         <script src="./scripts/authentication.js"></script>
+        <!-- Script for user authentication -->
     </head>
 
     <body>
-        <!-- Navbar placeholder -->
+        <!-- Header section with a placeholder for the navigation bar -->
         <header id="navbar-container">
             <nav id="navbar-placeholder"></nav>
         </header>
         <!-- Navbar placeholder -->
 
+        <!-- Main content area with buttons for different recycling categories -->
         <div id="main-container">
             <div id="buttons">
-                <a href=""><button class="button0"></button></a>
-                <a href=""><button class="button1"></button></a>
-                <a href=""><button class="button2"></button></a>
-                <a href=""><button class="button3"></button></a>
-                <a href=""><button class="button4"></button></a>
-                <a href=""><button class="button5"></button></a>
-                <a href=""><button class="button6"></button></a>
-                <a href=""><button class="button7"></button></a>
+                <!-- Buttons for each category like Garbage, Glass, Hazardous, etc. -->
+                <button class="category_1 main_button">Garbage</button>
+                <button class="category_2 main_button">Glass</button>
+                <button class="category_3 main_button">Hazardous</button>
+                <button class="category_4 main_button">Metal</button>
+                <button class="category_5 main_button">Plastic</button>
+                <button class="category_6 main_button">Category 6</button>
             </div>
         </div>
 
-        <!-- Footer placeholder -->
+        <!-- Footer section with a placeholder for additional content or links -->
         <footer id="footer-container">
             <nav id="footer-placeholder"></nav>
         </footer>
         <!-- Footer placeholder -->
+
+        <!-- Additional JavaScript files for functionality -->
         <script src="./scripts/skeleton.js"></script>
-        <script id="dynamically_loaded_script_to_depending_on_user_selected_category"></script>
+        <!-- Script for basic page functionality -->
+        <script src="scripts/material_categories.js"></script>
+        <!-- Script for handling material category interactions -->
     </body>
 </html>
