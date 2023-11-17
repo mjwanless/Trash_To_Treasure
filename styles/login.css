@@ -1,0 +1,23 @@
+* {
+    box-sizing: border-box;
+}
+
+#main_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.app_name {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.trash_to_treasure {
+    font-family: Pixelify Sans;
+    font-size: 4rem;
+    text-align: center;
+}
