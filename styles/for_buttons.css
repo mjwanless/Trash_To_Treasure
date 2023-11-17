@@ -16,12 +16,14 @@
     align-items: center;
 }
 
-.search_button,
-.depot_locations_button,
-.other_resources_button,
-.profile_button {
+.main_button {
     min-width: 40vw;
     min-height: 15vh;
+}
+
+#home_button {
+    background-color: red;
+    max-height: 10vh;
 }
 
 
