@@ -24,13 +24,3 @@
     min-width: 40vw;
     min-height: 15vh;
 }
-
-#home_button {
-    background-color: white;
-    max-height: 10vh;
-}
-
-.home_button_icon {
-    max-height: 5vh;
-}
-

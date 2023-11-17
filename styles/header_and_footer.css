@@ -34,3 +34,14 @@
     align-items: center;
     justify-content: space-evenly;
 }
+
+#home_button {
+    background-color: white;
+    max-height: 10vh;
+    border: none;
+    border-radius: 5px;
+}
+
+.home_button_icon {
+    max-height: 5vh;
+}
