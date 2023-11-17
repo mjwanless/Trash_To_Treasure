@@ -15,7 +15,7 @@ var uiConfig = {
                     school: "BCIT"
                 }).then(function() {
                     console.log("new user added to firestore");
-                    window.location.assign("homepage_using_buttons.html");
+                    window.location.assign("homepage.html");
                 }).catch(function (error) {
                     console.log("Error adding new user: " + error);
                 });
@@ -32,7 +32,7 @@ var uiConfig = {
     },
     // Will use popup for IDP Providers sign-in flow instead of the default, redirect.
     signInFlow: 'popup',
-    signInSuccessUrl: 'homepage_using_buttons.html',
+    signInSuccessUrl: 'homepage.html',
     signInOptions: [
         // Leave the lines as is for the providers you want to offer your users.
         // firebase.auth.GoogleAuthProvider.PROVIDER_ID,

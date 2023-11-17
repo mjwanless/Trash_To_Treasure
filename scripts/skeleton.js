@@ -20,7 +20,7 @@ function loadSkeleton() {
 loadSkeleton(); //invoke the function
 
 function home_button_redirect() {
-    window.location.href = "./homepage_using_buttons.html";
+    window.location.href = "./homepage.html";
 }
 
 document.addEventListener("click", function (e) {

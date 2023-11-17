@@ -1,79 +1,9 @@
-#navbar {
-    height: 10vh;
-    border-bottom: 2px black solid;
-    background-color: grey;
-    display: flex;
-    padding: 1vh;
-    justify-content: space-between;
-}
-
-#compost-id {
-    font-size: 8vh;
-}
-
-#burger-menu {
-    font-size: 8vh;
-}
-
 #main-container {
+    display: flex;
+    flex-direction: column;
     background-color: beige;
     height: 80vh;
 }
-
-#footer {
-    background-color: grey;
-    height: 10vh;
-    border-top: 2px black solid;
-    display: flex;
-    align-items: center;
-    /* justify-content: flex-start; */
-    justify-content: space-evenly;
-    /* padding-left: 20px; */
-    color: white;
-    /* gap: 20px; */
-    /* Creates spacing between the elements */
-}
-
-.footer-content {
-    display: flex;
-    font-family: Pixelify Sans;
-    align-items: center;
-    gap: 20px;
-    /* Provides spacing between the items */
-}
-
-#footer a {
-    text-decoration: none;
-    /* Removes the underline */
-    font-family: Pixelify Sans;
-    color: white;
-    /* Makes link text white */
-    margin: 0 10px;
-    /* Adds some spacing around each link */
-    transition: color 0.2s;
-    /* Adds a smooth transition on hover */
-}
-
-.footer-icons {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    /* Increase this value to add more space between icons */
-}
-
-.footer-icons a {
-    text-decoration: none;
-    color: white;
-    transition: color 0.2s;
-}
-
-.footer-icons a:hover {
-    color: #ddd;
-}
-
-/* Sebastian's css End */
-
-
 
 /* CSS for buttons */
 #main-container {
