@@ -9,3 +9,18 @@ document.addEventListener("click", function (e) {
         redirect_user_to_search_page()
     }
 })
+
+function get_material_names() {
+    var firestore_materials_collection = firebase.firestore().collection("materials");
+
+    firestore_materials_collection
+        .get()
+        .then((materials_collection) => {
+            materials_collection.forEach((doc) => {
+                var material_category = doc.id;
+                console.log("material_category: ", material_category)
+            })
+        })
+}
+
+get_material_names();
