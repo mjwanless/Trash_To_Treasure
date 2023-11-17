@@ -1,4 +1,4 @@
-#main-container {
+#main_container {
     display: flex;
     flex-direction: column;
     background-color: beige;
@@ -6,7 +6,7 @@
 }
 
 /* CSS for buttons */
-#main-container {
+#main_container {
     display: flex;
     justify-content: center;
     align-items: center;
