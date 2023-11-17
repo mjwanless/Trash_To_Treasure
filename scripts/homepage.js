@@ -2,7 +2,7 @@ function redirect_user_to_search_page() {
     window.location.href = 'material_categories.html'
 }
 function redirect_user_to_depot_locations_page() {
-    window.location.href = 'depot_location.html'
+    window.location.href = 'depot_locations.html'
 }
 function redirect_user_to_other_resources_page() {
     window.location.href = 'other_resources.html'
