@@ -18,3 +18,15 @@ function loadSkeleton() {
     });
 }
 loadSkeleton(); //invoke the function
+
+function home_button_redirect() {
+    window.location.href = "./homepage_using_buttons.html";
+}
+
+document.addEventListener("click", function (e) {
+    const home_clicked = e.target.closest("#home_button");
+    if (home_clicked) {
+        console.log("home button clicked");
+        home_button_redirect()
+    }
+});

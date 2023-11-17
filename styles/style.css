@@ -142,4 +142,12 @@ label {
     color: #ddd;
 }
 
+#home_button {
+    max-height: 10vh;
+}
+
+.home_button_icon {
+    max-height: 5vh;
+}
+
 /* Sebastian's css End */

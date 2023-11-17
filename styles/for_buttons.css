@@ -16,8 +16,13 @@
     align-items: center;
 }
 
-button {
+.search_button,
+.depot_locations_button,
+.other_resources_button,
+.profile_button {
     min-width: 40vw;
     min-height: 15vh;
 }
+
+
 
