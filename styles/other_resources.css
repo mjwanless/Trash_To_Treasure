@@ -1,0 +1,27 @@
+#external_resources {
+    display: flex;
+    flex-direction: column;
+    min-height: 80vh;
+    justify-content: space-around;
+}
+
+.resource {
+    display: flex;
+    min-width: 80vw;
+    justify-content: space-evenly;
+}
+
+a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.resource button {
+    width: 30vw;
+    max-height: 20vh;
+}
+
+.resource img {
+    width: 30vw;
+}
