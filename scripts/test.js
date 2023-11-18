@@ -10,17 +10,20 @@ document.addEventListener("click", function (e) {
     }
 })
 
-function get_material_names() {
+function display_categories() {
     var firestore_materials_collection = firebase.firestore().collection("materials");
-
     firestore_materials_collection
         .get()
-        .then((materials_collection) => {
-            materials_collection.forEach((doc) => {
-                var material_category = doc.id;
-                console.log("material_category: ", material_category)
-            })
-        })
-}
+        .then((materials) => {
+            var materials_array = materials.docs.map(doc => doc.id);
+            console.log("materials_array: ", materials_array)
+            document.getElementsByClassName('category_1')[0].innerHTML = materials_array[0];
+            document.getElementsByClassName('category_2')[0].innerHTML = materials_array[1];
+            document.getElementsByClassName('category_3')[0].innerHTML = materials_array[2];
+            document.getElementsByClassName('category_4')[0].innerHTML = materials_array[3];
+            document.getElementsByClassName('category_5')[0].innerHTML = materials_array[4];
+})}
 
-get_material_names();
+
+display_categories();
+
