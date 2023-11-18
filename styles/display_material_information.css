@@ -1,0 +1,48 @@
+.general_information {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 35vh;
+    min-width: 100%;
+}
+
+.material_image {
+    min-width: 44vw;
+    margin: 3vw;
+    text-align: center;
+    background-color: lightgray;
+}
+
+.material_specifications {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    min-width: 44vw;
+    min-height: 100%;
+    margin: 0 3vw;
+}
+
+.insert_category,
+.insert_name,
+.insert_type {
+    background-color: lightgray;
+}
+
+.depot_information {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    min-height: 45vh;
+    min-width: 100%;
+}
+
+.material_description {
+    margin: 0 3vw;
+    background-color: lightgray;
+}
+
+.depot_location {
+    margin: 0 3vw;
+    background-color: lightgray;
+}
+

@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 #navbar {
     height: 10vh;
     border-bottom: 2px black solid;

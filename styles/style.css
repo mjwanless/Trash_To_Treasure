@@ -2,16 +2,12 @@
     display: flex;
     flex-direction: column;
     background-color: beige;
+    justify-content: center;
+    align-items: center;
     height: 80vh;
 }
 
 /* CSS for buttons */
-#main_container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 #buttons {
     display: flex;
     flex-wrap: wrap;
