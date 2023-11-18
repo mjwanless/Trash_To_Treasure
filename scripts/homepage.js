@@ -36,7 +36,7 @@ document.addEventListener("click", function (e) {
     }
 });
 
-function displayNameFromFirestore() {
+function display_username() {
     // Check if the user is logged in:
     firebase.auth().onAuthStateChanged((user) => {
         if (user) {
@@ -56,7 +56,7 @@ function displayNameFromFirestore() {
 }
 
 // just a test function to help me understand getting the user ID
-function testconsoleloguserid() {
+function test_console_log_user_id() {
     firebase.auth().onAuthStateChanged((user) => {
         if (user) {
             console.log(user.uid);
@@ -64,5 +64,5 @@ function testconsoleloguserid() {
     });
 }
 
-displayNameFromFirestore();
-testconsoleloguserid();
+display_username();
+test_console_log_user_id();
