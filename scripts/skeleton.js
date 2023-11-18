@@ -24,9 +24,17 @@ function home_button_redirect() {
 }
 
 document.addEventListener("click", function (e) {
+    const back_button_clicked = e.target.closest("#back_button");
+    if (back_button_clicked) {
+        console.log("back button clicked");
+        window.history.back();
+    }
+});
+
+document.addEventListener("click", function (e) {
     const home_clicked = e.target.closest("#home_button");
     if (home_clicked) {
         console.log("home button clicked");
-        home_button_redirect()
+        home_button_redirect();
     }
 });
