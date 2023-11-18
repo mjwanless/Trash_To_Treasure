@@ -9,25 +9,25 @@ function display_recycling_information(collection) {
             
             // Logging and displaying the type of material.
             console.log(material_data["type"])
-            $("#type-textbox").html(material_data["type"])
+            $(".insert_type").html(material_data["type"])
 
             // Logging and displaying the description of the material.
             console.log(material_data["description"])
-            $(".details-field").html(material_data["description"])
+            $(".material_description").html(material_data["description"])
 
             // Logging and formatting the material's name to replace underscores with spaces.
             console.log(material_data["name"])
             var material_name = material_data["name"]
             var no_underscores = material_name.replace("_", " ")
-            $("#name-textbox").html(no_underscores)
+            $("insert_name").html(no_underscores)
 
             // Logging and displaying if the material is recyclable.
             console.log(material_data["recyclable"])
-            $("#recyclable-textbox").html(material_data["recyclable"])
+            $("insert_boolean").html(material_data["recyclable"])
 
             // Constructing an image tag and displaying the image related to the material.
             completedImgTag = `<img src="${material_data["img_alt"]}" alt="">`
-            $("#materials-display-image").html(material_data)
+            $(".insert_image").html(material_data)
         })
 }
 
@@ -39,7 +39,7 @@ function display_depot_location1(collection) {
         .then(doc => {
             depot_data = doc.data().address; // Retrieving the address.
             console.log(depot_data)
-            $("#location1").html(depot_data) // Displaying the address in the specified element.
+            $(".location_").html(depot_data) // Displaying the address in the specified element.
         })
 }
 
@@ -51,7 +51,7 @@ function display_depot_location2(collection) {
         .then(doc => {
             depot_data = doc.data().address;
             console.log(depot_data)
-            $("#location2").html(depot_data)
+            $(".location_2").html(depot_data)
         })
 }
 
@@ -63,7 +63,7 @@ function display_depot_location3(collection) {
         .then(doc => {
             depot_data = doc.data().address;
             console.log(depot_data)
-            $("#location3").html(depot_data)
+            $(".location_3").html(depot_data)
         })
 }
 

@@ -6,21 +6,21 @@ function display_recycling_information(collection) {
             material_data = doc.data().steel;
             
             console.log(material_data["type"])
-            $("#type-textbox").html(material_data["type"])
+            $(".insert_type").html(material_data["type"])
 
             console.log(material_data["description"])
-            $(".details-field").html(material_data["description"])
+            $(".material_description").html(material_data["description"])
 
             console.log(material_data["name"])
             var material_name = material_data["name"]
             var no_underscores = material_name.replace("_", " ")
-            $("#name-textbox").html(no_underscores)
+            $(".insert_name").html(no_underscores)
 
             console.log(material_data["recyclable"])
-            $("#recyclable-textbox").html(material_data["recyclable"])
+            $(".insert_boolean").html(material_data["recyclable"])
 
             completedImgTag = `<img src="${material_data["img_alt"]}" alt="">`
-            $("#materials-display-image").html(material_data)
+            $(".insert_image").html(material_data)
         })
 }
 
@@ -31,7 +31,7 @@ function display_depot_location1(collection) {
         .then(doc => {
             depot_data = doc.data().address;
             console.log(depot_data)
-            $("#location1").html(depot_data)
+            $(".location_1").html(depot_data)
         })
 }
 
@@ -42,7 +42,7 @@ function display_depot_location2(collection) {
         .then(doc => {
             depot_data = doc.data().address;
             console.log(depot_data)
-            $("#location2").html(depot_data)
+            $(".location_2").html(depot_data)
         })
 }
 
@@ -53,7 +53,7 @@ function display_depot_location3(collection) {
         .then(doc => {
             depot_data = doc.data().address;
             console.log(depot_data)
-            $("#location3").html(depot_data)
+            $(".location_3").html(depot_data)
         })
 }
 
