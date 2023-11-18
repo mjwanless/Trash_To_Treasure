@@ -22,7 +22,7 @@ function display_material_subcategories(collection, user_selected_category) {
             for (i = 0; i <= ordered_fields.length; i++)
                 // Update the HTML content of each button with the subcategory name.
                 // Replace underscores in subcategory names with spaces for display.
-                $(`.button${i}`).html(ordered_fields[i].replace("_", " "))
+                $(`.button${i}`).html(ordered_fields[i].replace("_", " "));
         })
 }
 
