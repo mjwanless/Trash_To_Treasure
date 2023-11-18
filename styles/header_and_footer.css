@@ -3,12 +3,13 @@
 }
 
 #navbar {
+    color: white;
     height: 10vh;
-    border-bottom: 2px black solid;
-    background-color: grey;
+    background-color: #187753;
     display: flex;
     padding: 1vh;
     justify-content: space-between;
+    box-shadow: 100px 100px 100px rgb(0 0 0 / 1);
 }
 
 #navbar_right {
@@ -31,29 +32,27 @@
 }
 
 #footer {
-    background-color: grey;
+    background-color: #187753;
     height: 10vh;
-    border-top: 2px black solid;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 30px;
 }
 
-#home_button {
-    background-color: white;
-    max-height: 10vh;
-    border: none;
-    border-radius: 5px;
-}
-
-.home_button_icon {
-    max-height: 5vh;
-}
-
-.back_button_icon {
-    height: 40px;
-}
-
+.home_button_icon,
+.back_button_icon,
 .help_button_icon {
     height: 40px;
+}
+
+.footer_button {
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    border-radius: 20px;
+}
+
+.footer_button:hover {
+    background-color: white;
 }
