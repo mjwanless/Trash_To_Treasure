@@ -49,3 +49,11 @@
 .home_button_icon {
     max-height: 5vh;
 }
+
+.back_button_icon {
+    height: 40px;
+}
+
+.help_button_icon {
+    height: 40px;
+}
