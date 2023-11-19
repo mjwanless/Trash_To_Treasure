@@ -44,8 +44,8 @@ function toggleFavorite() {
 function updateFavoriteButton(isFavorited) {
     const favoriteButton = document.getElementById('favoriteButton');
     if (isFavorited) {
-        favoriteButton.innerHTML = '<span class="material-icons">star</span> Favorited';
+        favoriteButton.innerHTML = '<span class="material-symbols-outlined">star</span> Favorited';
     } else {
-        favoriteButton.innerHTML = '<span class="material-icons">star_border</span> Favorite';
+        favoriteButton.innerHTML = '<span class="material-symbols-outlined">star_border</span> Favorite';
     }
 }
