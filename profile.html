@@ -37,33 +37,32 @@
         <!-- Navbar placeholder -->
 
         <div id="main_container">
-            <h1 id="greeting">Hello, <span class="name_goes_here"></span></h1>
+            <h1 id="greeting_text">Hello, <span class="name_goes_here"></span></h1>
             <div id="profile-info-display">
                 <form>
-                    <fieldset class="mb-3" id="personalInfoFields" disabled>
-                        <div class="form-group">
+                    <fieldset id="personalInfoFields" disabled>
+                        <div class="presentation_field">
                             <label>Name</label>
                             <input type="text" id="nameInput" class="form-control" placeholder="Enter your name" />
                         </div>
-                        <div class="form-group">
+                        <div class="presentation_field">
                             <label>School</label>
                             <input type="text" id="schoolInput" class="form-control" placeholder="Enter your school" />
                         </div>
-                        <div class="form-group">
+                        <div class="presentation_field">
                             <label>City</label>
                             <input type="text" id="cityInput" class="form-control" placeholder="Enter your city" />
                         </div>
-                        <div class="form-group">
+                        <div class="presentation_field">
                             <label>Email</label>
                             <input type="text" id="emailInput" class="form-control" placeholder="Enter your city" />
                         </div>
                         <p>This will be where the favourite recyclables will be</p>
                         <p>This will be where the favourite depot locations will be</p>
                     </fieldset>
-                    <div class="d-flex justify-content-end mt-5">
-                        <button type="button" class="btn btn-secondary" onclick="editUserInfo()">Edit</button>
-                        <span style="width: 10px"></span>
-                        <button type="button" class="btn btn-info" onclick="saveUserInfo()">Save</button>
+                    <div id="profile_buttons">
+                        <button type="button" class="profile_button_styles" onclick="editUserInfo()">Edit</button>
+                        <button type="button" class="profile_button_styles" onclick="saveUserInfo()">Save</button>
                     </div>
                 </form>
             </div>
