@@ -33,11 +33,12 @@ function load_material_information(collection) {
             console.log(material_data["recyclable"])
             $(".insert_boolean").html(material_data["recyclable"])
 
-            // Constructing an image tag and displaying the image related to the material.
-            completedImgTag = `<img src="${material_data["img_alt"]}" alt="">`
-            $(".insert_image").html(material_data)
-        })
-}
+    // Construct an image tag with the URL from Firestore and display the image.
+    const imgUrl = material_data["img"]; 
+    const imgTag = `<img src="${imgUrl}" alt="${material_data["name"]}">`;
+    $(".insert_image").html(imgTag);
+});
+        }
 
 load_material_information("materials", user_selected_category, user_selected_subcategory)
 
