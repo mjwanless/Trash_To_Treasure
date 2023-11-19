@@ -11,6 +11,7 @@ html {
     justify-content: center;
     align-items: center;
     height: 82vh;
+    overflow: auto;
 }
 
 #greeting_text {
