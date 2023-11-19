@@ -9,7 +9,6 @@
     display: flex;
     padding: 1vh;
     justify-content: space-between;
-    box-shadow: 100px 100px 100px rgb(0 0 0 / 1);
 }
 
 #navbar_right {
@@ -17,8 +16,9 @@
     justify-content: center;
     align-items: center;
     font-family: Pixelify Sans;
-    font-size: 2rem;
+    font-size: 1.8rem;
     text-align: center;
+    padding-right: 17px;
 }
 
 #navbar_left {
@@ -33,7 +33,7 @@
 
 #footer {
     background-color: #187753;
-    height: 10vh;
+    height: 8vh;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -50,7 +50,7 @@
 .footer_button {
     background-color: rgba(0, 0, 0, 0);
     border: none;
-    border-radius: 20px;
+    border-radius: 10px;
 }
 
 .footer_button:hover {
