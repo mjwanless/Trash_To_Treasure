@@ -9,6 +9,8 @@
     display: flex;
     padding: 1vh;
     justify-content: space-between;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
 }
 
 #navbar_right {
@@ -37,22 +39,24 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-left: 20px;
-    padding-right: 30px;
-}
-
-.home_button_icon,
-.back_button_icon,
-.help_button_icon {
-    height: 40px;
+    padding-left: 40px;
+    padding-right: 40px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
 }
 
 .footer_button {
     background-color: rgba(0, 0, 0, 0);
     border: none;
     border-radius: 10px;
+    color: white;
 }
 
 .footer_button:hover {
     background-color: white;
+    color: #187753;
+}
+
+.material-symbols-outlined {
+    font-size: 2.2rem;
 }
