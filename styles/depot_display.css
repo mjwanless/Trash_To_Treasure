@@ -1,3 +1,11 @@
+.depot_location {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 20px;
+    min-height: 60vh;
+}
+
 .favorite-button {
     border: none;
     background-color: transparent;

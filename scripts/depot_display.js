@@ -50,3 +50,51 @@ function updateFavoriteButton(isFavorited) {
     }
 }
 
+function load_depot_information(collection) {
+    let user_selected_depot = localStorage.getItem("user_selected_depot")
+    console.log(user_selected_depot)
+    let strip_user_selected_depot = user_selected_depot.trim()
+    console.log(strip_user_selected_depot)
+    let depot_display_nameV1 = strip_user_selected_depot.replace("<br>", "")
+    console.log(depot_display_nameV1)
+    let depot_display_name = strip_user_selected_depot.replace("<br>", "")
+    console.log(depot_display_nameV1)
+    let to_lower_case = strip_user_selected_depot.toLocaleLowerCase()
+    console.log(to_lower_case)
+    let remove_p_element = to_lower_case.replace("<p>", "")
+    console.log(remove_p_element)
+    let remove_p_close_element = remove_p_element.replace("</p>", "")
+    console.log(remove_p_close_element)
+    let remove_br_element = remove_p_close_element.replaceAll("<br>", "_")
+    console.log(remove_br_element)
+    let formatted_depot_name = remove_br_element.replaceAll(" ", "_")
+    console.log(formatted_depot_name)
+    db.collection(collection, formatted_depot_name)
+        .doc(formatted_depot_name)
+        .get()
+        .then(doc => {
+            data = doc.data()
+            console.log(data)
+            let depot_image = "tbd"
+            let depot_phone = data["phone_number"]
+            let depot_address = data["address"]
+            let depot_website = "tbd"
+            let depot_hours = data["hours"]
+            let depot_notes = "tbd"
+            $('.insert_name').html(depot_display_name)
+            $('.insert_image').html(depot_image)
+            $('.insert_phone').html(depot_phone)
+            $('.insert_address').html(depot_address)
+            $('.insert_website').html(depot_website)
+            $('.monday').html(depot_hours["monday"])
+            $('.tuesday').html(depot_hours["tuesday"])
+            $('.wednesday').html(depot_hours["wednesday"])
+            $('.thursday').html(depot_hours["thursday"])
+            $('.friday').html(depot_hours["friday"])
+            $('.saturday').html(depot_hours["saturday"])
+            $('.sunday').html(depot_hours["sunday"])
+            $('.insert_notes').html(depot_notes)
+});
+        }
+
+load_depot_information("locations")

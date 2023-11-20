@@ -40,7 +40,7 @@ function load_material_information(collection) {
 });
         }
 
-load_material_information("materials", user_selected_category, user_selected_subcategory)
+load_material_information("materials")
 
 // function test(subcategory) {
 //     var subcategory = subcategory.replace(" ", "_");
