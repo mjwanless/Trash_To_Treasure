@@ -6,7 +6,7 @@ function showMap() {
     const map = new mapboxgl.Map({
         container: 'map', // Container ID
         style: 'mapbox://styles/mapbox/streets-v11', // Styling URL
-        center: [-122.964274, 49.236082], // Starting position
+        center: [-123.10288748791648, 49.27310594745156], // Starting position
         zoom: 8 // Starting zoom
     });
 
