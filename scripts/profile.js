@@ -95,9 +95,9 @@ function display_favourite_depots() {
                 .then((doc) => {
                     let userData = doc.data().favorites;
 
-                    userData.forEach((favorite) => {
-                        console.log(favorite);
-                    });
+                    for (i = 0; i < userData.length; i++) {
+                        $(`.favourite_${i}`).html(userData[i]);
+                    }
                 });
         }
     });
