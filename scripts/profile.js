@@ -83,7 +83,10 @@ function saveUserInfo() {
         });
 
     //c) disable edit
-    document.getElementById("personalInfoFields").disabled = false;
+    document.getElementById("personalInfoFields").disabled = true;
+    setTimeout(() => {
+        location.reload()
+    }, 500);
 }
 
 function display_favourite_depots() {
