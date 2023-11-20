@@ -12,6 +12,8 @@
 }
 
 .favorite-button {
+    display: flex;
+    align-items: center;
     border: 1px solid;
     border-radius: 15px;
     background-color: transparent;
