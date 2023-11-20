@@ -10,6 +10,12 @@
     justify-content: space-evenly;
 }
 
+.favourite_display {
+    border: 1px solid #187753;
+    border-radius: 10px;
+    padding: 3px 6px;
+    margin-top: 3px;
+}
 #profile_buttons {
     display: flex;
     justify-content: space-evenly;
