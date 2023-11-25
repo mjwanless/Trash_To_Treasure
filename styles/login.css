@@ -7,7 +7,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    min-height: 82vh;
 }
 
 .app_name {
@@ -17,7 +17,22 @@
 }
 
 .trash_to_treasure {
-    font-family: Pixelify Sans;
-    font-size: 4rem;
+    /* font-family: Pixelify Sans; */
+    font-size: 3rem;
     text-align: center;
+    margin-bottom: 80px;
+    border-bottom: 1px solid #187753;
+}
+
+.material-symbols-outlined {
+    font-size: 3rem;
+}
+
+#footer {
+    justify-content: center;
+}
+
+#copyright {
+    color: white;
+    font-size: 1.2rem;
 }

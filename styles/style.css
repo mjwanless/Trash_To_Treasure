@@ -1,5 +1,6 @@
 html {
-    font-family: Pixelify Sans;
+    /* font-family: Pixelify Sans; */
+    font-family: "VT323", monospace;
 }
 
 #main_container {
