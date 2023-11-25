@@ -44,3 +44,12 @@ html {
     background-color: #187753;
     font-size: 1.2rem;
 }
+
+.main_button:hover {
+    background-color: #55ac85;
+}
+
+.main_button:active {
+    background-color: #55ac85;
+    transform: translateY(5px);
+}
