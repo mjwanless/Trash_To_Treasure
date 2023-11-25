@@ -1,4 +1,8 @@
+#main_container {
+    padding-top: 400px;
+    padding-bottom: 30px;
+}
+
 .main_button {
-    min-height: 6vh;
-    gap: 10px;
+    font-size: 1.7rem;
 }
