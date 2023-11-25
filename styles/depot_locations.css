@@ -11,24 +11,25 @@
     min-height: 10vh;
 } */
 
-#greeting_text {
-    margin-bottom: 0px;
+#main_container {
+    padding-top: 700px;
+    padding-bottom: 20px;
 }
 
-#main_container {
-    gap: 5px;
+.depot_button {
+    margin-bottom: 20px;
 }
 
 .depot_location_button {
     text-align: center;
     width: 80vw;
-    min-height: 6vh;
+    min-height: 12vh;
     border-radius: 10px;
     border: none;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     color: white;
     background-color: #187753;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     text-wrap: wrap;
 }
 
