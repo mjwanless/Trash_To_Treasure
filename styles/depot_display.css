@@ -66,6 +66,9 @@
     box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Optional: adds a subtle shadow for depth */
     background-color: #fff; /* Optional: change background color */
     border-radius: 10px; /* Optional: rounded corners */
+    border: 1px solid #187753; /* Adding the border */
+    border-radius: 10px; /* Adding rounded corners */
+    margin-bottom: 20px; 
 }
 
 #reviews_container {
@@ -102,10 +105,10 @@
 }
 
 #review_text {
-    width: 100%; /* Start with 100% of the parent container's width */
-    box-sizing: border-box; /* Padding and border are included in the width */
-    margin: 0; /* Ensure there's no additional margin affecting the width */
-    padding: 10px; /* Match the padding to the user reviews box if it has the same */
+    width: 100%; 
+    box-sizing: border-box; 
+    margin: 0; 
+    padding: 10px; 
     border: 1px solid #ccc; 
 }
 /* Submit Review Button Styles */
