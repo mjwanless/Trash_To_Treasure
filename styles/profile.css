@@ -1,3 +1,8 @@
+#main_container {
+    padding-top: 100px;
+    padding-bottom: 20px;
+}
+
 label {
     margin-right: 10px;
 }
@@ -29,12 +34,12 @@ label {
 #profile_buttons {
     display: flex;
     justify-content: space-evenly;
-    gap: 20px;
+    gap: 10px;
     margin-top: 20px;
 }
 
 .profile_button_styles {
-    min-width: 30vw;
+    min-width: 25vw;
     min-height: 5vh;
     border-radius: 8px;
     border: none;
