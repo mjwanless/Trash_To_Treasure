@@ -108,9 +108,28 @@
     padding: 10px; /* Match the padding to the user reviews box if it has the same */
     border: 1px solid #ccc; 
 }
+/* Submit Review Button Styles */
 #submit_review_button {
-    width: 100%; /* Match the parent container's width */
+
     box-sizing: border-box;
-    margin: 0; 
-    
+    margin: 0;
+    min-width: 30vw; 
+    min-height: 5vh;
+    border-radius: 8px;
+    border: none;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    color: white;
+    background-color: #187753;
+    cursor: pointer;
+    font-size: 1.2rem; 
 }
+
+#submit_review_button:hover {
+    background-color: #55ac85;
+}
+
+#submit_review_button:active {
+    background-color: #55ac85;
+    transform: translateY(5px);
+}
+
