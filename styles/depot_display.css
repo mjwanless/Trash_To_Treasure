@@ -1,14 +1,23 @@
-.depot_location {
-    display: flex;
-    flex-direction: column;
+/* #main_container {
+    padding-top: 100px;
+    padding-bottom: 30px;
+}
+*/
+
+#main_container {
+    padding-top: 200px;
+    padding-bottom: 40px;
+    font-size: 1.2rem;
     justify-content: space-evenly;
     gap: 20px;
-    min-height: 20vh;
+    align-items: flex-start;
+    margin-left: 40px;
 }
 
 #map {
     width: 80vw;
     height: 20vh;
+    padding-bottom: 200px;
 }
 
 .favorite-button {
@@ -19,9 +28,31 @@
     background-color: transparent;
     cursor: pointer;
     font-size: 24px; /* Adjust the size of the icon */
-    color: gold; /* Color of the star */
+    color: orange; /* Color of the star */
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    background-color: beige;
+    align-self: center;
 }
 
 .favorite-button:hover {
     color: orange; /* Color when hovering over the button */
+}
+.location_hours {
+    min-width: 80vw;
+}
+
+.location_phone,
+.location_address,
+.location_name,
+.location_website,
+.location_hours,
+.location_notes {
+    border: 1px solid #187753;
+    border-radius: 10px;
+    padding: 3px 6px;
+}
+
+.favourite_button {
+    align-self: center;
+    margin-right: 40px;
 }
