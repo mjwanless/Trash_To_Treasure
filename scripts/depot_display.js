@@ -62,7 +62,9 @@ function submitReview() {
         return;
     }
 
-    let currentLocation = localStorage.getItem("user_selected_depot");
+    // Retrieve and format the depot name to use as the document ID
+    let depotName = localStorage.getItem("user_selected_depot");
+    let formattedDepotName = formatDepotName(depotName);
 
     let review = {
         name: currentUser.displayName || 'Anonymous',
@@ -71,41 +73,60 @@ function submitReview() {
         timestamp: new Date()
     };
 
-        // Save to Firestore in the 'reviews' collection
-        firebase.firestore().collection('reviews').add(review)
-        .then(() => {
-            alert('Review submitted successfully');
-            loadReviews(); // Reload the reviews to display the new one
-        })
-        .catch(error => {
-            console.error('Error writing review: ', error);
+    // Reference to the specific depot document in the depot_reviews collection
+    const depotReviewRef = firebase.firestore().collection('depot_reviews').doc(formattedDepotName);
+
+    // Use a transaction to add the new review to the array of reviews
+    firebase.firestore().runTransaction(transaction => {
+        return transaction.get(depotReviewRef).then(doc => {
+            if (!doc.exists) {
+                transaction.set(depotReviewRef, { reviews: [review] });
+            } else {
+                let existingReviews = doc.data().reviews || [];
+                transaction.update(depotReviewRef, { reviews: [...existingReviews, review] });
+            }
         });
+    }).then(() => {
+        alert('Review submitted successfully');
+        loadReviews(); // Reload the reviews to display the new one
+    }).catch(error => {
+        console.error('Error writing review: ', error);
+    });
 }
+
+// Helper function to format the depot name to use as document ID
+function formatDepotName(depotName) {
+    return depotName.trim().toLowerCase().replaceAll(" ", "_").replaceAll("<br>", "_");
+}
+
 
 // Load reviews from Firestore
 function loadReviews() {
-    firebase.firestore().collection('reviews').orderBy('timestamp', 'desc')
-        .get()
-        .then(querySnapshot => {
-            let reviewsHtml = '';
-            if (!querySnapshot.empty) {
-                querySnapshot.forEach(doc => {
-                    let review = doc.data();
-                    reviewsHtml += `<div class="review">
-                                        <h4>${review.name}</h4>
-                                        <div class="stars">${getStarsHtml(review.rating)}</div>
-                                        <p>${review.text}</p>
-                                    </div>`;
-                });
-            } else {
-                reviewsHtml = '<p>No reviews available.</p>';
-            }
-            document.getElementById('reviews_container').innerHTML = reviewsHtml;
-        })
-        .catch(error => {
-            console.error('Error loading reviews: ', error);
-            document.getElementById('reviews_container').innerHTML = '<p>Error loading reviews.</p>';
-        });
+    // Retrieve and format the depot name to use as the document ID
+    let depotName = localStorage.getItem("user_selected_depot");
+    let formattedDepotName = formatDepotName(depotName);
+
+    // Reference to the specific depot document in the depot_reviews collection
+    const depotReviewRef = firebase.firestore().collection('depot_reviews').doc(formattedDepotName);
+
+    depotReviewRef.get().then(doc => {
+        let reviewsHtml = '';
+        if (doc.exists && doc.data().reviews) {
+            doc.data().reviews.forEach(review => {
+                reviewsHtml += `<div class="review">
+                                    <h4>${review.name}</h4>
+                                    <div class="stars">${getStarsHtml(review.rating)}</div>
+                                    <p>${review.text}</p>
+                                </div>`;
+            });
+        } else {
+            reviewsHtml = '<p>No reviews available.</p>';
+        }
+        document.getElementById('reviews_container').innerHTML = reviewsHtml;
+    }).catch(error => {
+        console.error('Error loading reviews: ', error);
+        document.getElementById('reviews_container').innerHTML = '<p>Error loading reviews.</p>';
+    });
 }
 
 
