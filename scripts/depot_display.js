@@ -8,7 +8,11 @@ document.addEventListener("DOMContentLoaded", function () {
             checkFavoriteStatus();
         }
     });
-});
+
+     // Load reviews when the page is loaded
+    loadReviews();
+    });
+
 
 function checkFavoriteStatus() {
     let currentUser = firebase.auth().currentUser;
@@ -84,17 +88,26 @@ function loadReviews() {
         .get()
         .then(querySnapshot => {
             let reviewsHtml = '';
-            querySnapshot.forEach(doc => {
-                let review = doc.data();
-                reviewsHtml += `<div class="review">
-                                    <h4>${review.name}</h4>
-                                    <div class="stars">${getStarsHtml(review.rating)}</div>
-                                    <p>${review.text}</p>
-                                </div>`;
-            });
+            if (!querySnapshot.empty) {
+                querySnapshot.forEach(doc => {
+                    let review = doc.data();
+                    reviewsHtml += `<div class="review">
+                                        <h4>${review.name}</h4>
+                                        <div class="stars">${getStarsHtml(review.rating)}</div>
+                                        <p>${review.text}</p>
+                                    </div>`;
+                });
+            } else {
+                reviewsHtml = '<p>No reviews available.</p>';
+            }
             document.getElementById('reviews_container').innerHTML = reviewsHtml;
+        })
+        .catch(error => {
+            console.error('Error loading reviews: ', error);
+            document.getElementById('reviews_container').innerHTML = '<p>Error loading reviews.</p>';
         });
 }
+
 
 // Generate HTML for stars based on rating
 function getStarsHtml(rating) {
