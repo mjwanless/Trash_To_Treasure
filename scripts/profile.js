@@ -125,3 +125,12 @@ function store_user_favourited_depot_clicked(user_favorited_depot) {
     let depot_name = user_favorited_depot.innerHTML
     localStorage.setItem("user_clicked_favourited_depot", depot_name)
 }
+function logout() {
+    firebase.auth().signOut().then(function() {
+        // Sign-out successful.
+        window.location.assign("login.html"); 
+    }).catch(function(error) {
+        // An error happened.
+        console.error("Error during logout: ", error);
+    });
+}
