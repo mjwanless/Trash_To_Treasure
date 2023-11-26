@@ -50,6 +50,82 @@ function updateFavoriteButton(isFavorited) {
     }
 }
 
+// Submit a review
+function submitReview() {
+    let currentUser = firebase.auth().currentUser;
+    if (!currentUser) {
+        alert('You must be logged in to submit a review');
+        return;
+    }
+
+    let currentLocation = localStorage.getItem("user_selected_depot");
+
+    let review = {
+        name: currentUser.displayName || 'Anonymous',
+        rating: getSelectedRating(),
+        text: document.getElementById('review_text').value,
+        timestamp: new Date()
+    };
+
+        // Save to Firestore in the 'reviews' collection
+        firebase.firestore().collection('reviews').add(review)
+        .then(() => {
+            alert('Review submitted successfully');
+            loadReviews(); // Reload the reviews to display the new one
+        })
+        .catch(error => {
+            console.error('Error writing review: ', error);
+        });
+}
+
+// Load reviews from Firestore
+function loadReviews() {
+    firebase.firestore().collection('reviews').orderBy('timestamp', 'desc')
+        .get()
+        .then(querySnapshot => {
+            let reviewsHtml = '';
+            querySnapshot.forEach(doc => {
+                let review = doc.data();
+                reviewsHtml += `<div class="review">
+                                    <h4>${review.name}</h4>
+                                    <div class="stars">${getStarsHtml(review.rating)}</div>
+                                    <p>${review.text}</p>
+                                </div>`;
+            });
+            document.getElementById('reviews_container').innerHTML = reviewsHtml;
+        });
+}
+
+// Generate HTML for stars based on rating
+function getStarsHtml(rating) {
+    let html = '';
+    for (let i = 0; i < 5; i++) {
+        html += `<span class="material-icons star ${i < rating ? 'selected' : ''}">star</span>`;
+    }
+    return html;
+}
+
+// Set rating based on star click
+function setRating(rating) {
+    const stars = document.querySelectorAll('#star_rating .star');
+    stars.forEach((star, index) => {
+        star.textContent = index < rating ? 'star' : 'star_border';
+    });
+}
+
+// Get the selected rating from the stars
+function getSelectedRating() {
+    const stars = document.querySelectorAll('#star_rating .star');
+    let rating = 0;
+    stars.forEach((star, index) => {
+        if (star.textContent === 'star') {
+            rating = index + 1;
+        }
+    });
+    return rating;
+}
+
+
 function load_depot_information(collection) {
     let user_selected_depot = localStorage.getItem("user_selected_depot")
     console.log(user_selected_depot)

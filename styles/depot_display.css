@@ -56,3 +56,61 @@
     align-self: center;
     margin-right: 40px;
 }
+
+
+/* Review Section Styles */
+#review_section {
+    width: 90%; /* Increase the width */
+    margin: 0 auto; /* Center align */
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Optional: adds a subtle shadow for depth */
+    background-color: #fff; /* Optional: change background color */
+    border-radius: 10px; /* Optional: rounded corners */
+}
+
+#reviews_container {
+    max-height: 200px; /* Adjust the height as per your requirement */
+    overflow-y: auto; /* Enables vertical scrolling */
+    padding: 10px;
+    border: 1px solid #ccc; /* Optional: adds a border */
+    margin-top: 10px;
+}
+
+.review {
+    margin-bottom: 10px; /* Space between reviews */
+}
+
+
+#review_form {
+    margin-top: 20px;
+}
+
+/* Star Rating Styles */
+.star {
+    cursor: pointer;
+    color: orange;
+}
+
+.star.selected {
+    color: orange;
+}
+
+#star_rating {
+    display: flex;
+    justify-content: flex-start; /* Align stars to the left */
+    gap: 5px; /* Adjust gap between stars */
+}
+
+#review_text {
+    width: 100%; /* Start with 100% of the parent container's width */
+    box-sizing: border-box; /* Padding and border are included in the width */
+    margin: 0; /* Ensure there's no additional margin affecting the width */
+    padding: 10px; /* Match the padding to the user reviews box if it has the same */
+    border: 1px solid #ccc; 
+}
+#submit_review_button {
+    width: 100%; /* Match the parent container's width */
+    box-sizing: border-box;
+    margin: 0; 
+    
+}
