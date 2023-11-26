@@ -6,3 +6,7 @@
 .main_button {
     font-size: 1.7rem;
 }
+
+.subcategory_button {
+    margin-bottom: 20px; /* Adjust this value for desired spacing */
+}
