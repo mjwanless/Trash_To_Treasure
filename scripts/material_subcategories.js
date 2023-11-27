@@ -40,5 +40,4 @@ function store_subcategory_and_redirect(subcategory_button) {
     window.location.href = "display_material_information.html";
 }
 
-// Assuming you have a user-selected category in local storage
 display_material_subcategories("materials");
