@@ -68,3 +68,20 @@ load_valid_depots()
 
 // test(user_selected_subcategory)
 
+document.addEventListener("click", function (e) {
+    const user_favorited_depot = e.target.closest(".depot_location")
+    if (user_favorited_depot) {
+        console.log("pressed favorited depot display");
+        store_user_favourited_depot_clicked(user_favorited_depot);
+        redirect_user_to_depot_display();
+    }
+})
+
+function redirect_user_to_depot_display() {
+    window.location.href = "./depot_display_from_profile.html"
+}
+
+function store_user_favourited_depot_clicked(user_favorited_depot) {
+    let depot_name = user_favorited_depot.innerHTML
+    localStorage.setItem("user_clicked_favourited_depot", depot_name)
+}
