@@ -40,7 +40,26 @@ function load_material_information(collection) {
 });
         }
 
-load_material_information("materials")
+function load_valid_depots() {
+    let valid_locations_html = "locations: <br />"
+    db.collection("locations")
+        .where("materials", "array-contains", user_selected_subcategory)
+        .get()
+        .then((valid_locations) => {
+            valid_locations.forEach ((location) => {
+                let depot_name = location.id
+                let depot_name_formatted = depot_name.replaceAll("_", " ")
+                valid_locations_html += `
+                                        <div class="depot_location">${depot_name_formatted}</div>    
+                                        `
+            })
+            $(".locations").html(valid_locations_html)
+        })
+    
+}
+
+load_material_information("materials", )
+load_valid_depots()
 
 // function test(subcategory) {
 //     var subcategory = subcategory.replace(" ", "_");
@@ -48,3 +67,4 @@ load_material_information("materials")
 // }
 
 // test(user_selected_subcategory)
+

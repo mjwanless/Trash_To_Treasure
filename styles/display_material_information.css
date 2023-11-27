@@ -1,6 +1,6 @@
 #main_container {
     padding-top: 50px;
-    padding-bottom: 80px;
+    /* padding-bottom: 80px; */
     font-size: 1.3rem;
 }
 
@@ -63,6 +63,10 @@
     border-radius: 10px;
     padding: 3px 6px;
     margin-top: 3px;
+}
+
+.locations {
+    overflow: scroll;
 }
 
 .depot_location {
