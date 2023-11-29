@@ -89,24 +89,47 @@ function saveUserInfo() {
     }, 500);
 }
 
-function display_favourite_depots() {
-    firebase.auth().onAuthStateChanged((user) => {
-        if (user) {
-            db.collection("users")
-                .doc(user.uid)
-                .get()
-                .then((doc) => {
-                    let userData = doc.data().favorites;
+// function display_favourite_depots() {
+//     firebase.auth().onAuthStateChanged((user) => {
+//         if (user) {
+//             db.collection("users")
+//                 .doc(user.uid)
+//                 .get()
+//                 .then((doc) => {
+//                     let userData = doc.data().favorites;
 
-                    for (i = 0; i < userData.length; i++) {
-                        $(`.favourite_${i}`).html(userData[i]);
-                    }
-                });
+//                     for (i = 0; i < userData.length; i++) {
+//                         $(`.favourite_${i}`).html(userData[i]);
+//                     }
+//                 });
+//         }
+//     });
+// }
+
+function load_favourite_depots() {
+    firebase.auth().onAuthStateChanged((user) => {
+        if (user) {            
+            db.collection("users")
+            .doc(user.uid)
+            .get()
+            .then((doc) => {
+                let userData = doc.data().favorites;
+                console.log(userData)
+                let favourite_locations_html = "title: "
+                for (let i = 0; i < userData.length; i++) {
+                    let depot_name_formatted = userData[i]
+                    console.log(depot_name_formatted)
+                    favourite_locations_html += `<div>${depot_name_formatted}</div>`
+                }
+                $("#profile_favourite_depots").html(favourite_locations_html)
+            })
         }
-    });
+    })
 }
 
-display_favourite_depots();
+load_favourite_depots()
+
+// display_favourite_depots();
 
 document.addEventListener("click", function (e) {
     const user_favorited_depot = e.target.closest(".favourite_display")
