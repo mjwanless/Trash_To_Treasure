@@ -1,5 +1,5 @@
 #main_container {
-    padding-top: 550px;
+    padding-top: 675px;
     padding-bottom: 20px;
     font-size: 1.2rem;
     justify-content: space-evenly;
@@ -44,6 +44,7 @@
     border: 1px solid #187753;
     border-radius: 10px;
     padding: 3px 6px;
+    max-width: 80vw;
 }
 
 .favourite_button {
