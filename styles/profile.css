@@ -1,5 +1,5 @@
 #main_container {
-    padding-top: 70px;
+    padding-top: 100px;
     padding-bottom: 40px;
 }
 
@@ -55,4 +55,9 @@ label {
 .profile_button_styles:active {
     background-color: #55ac85;
     transform: translateY(5px);
+}
+
+#profile_favourite_depots {
+    overflow: scroll;
+    max-height: 30vh;
 }
