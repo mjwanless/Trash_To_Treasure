@@ -28,3 +28,7 @@
     background-color: #55ac85;
     transform: translateY(5px);
 }
+
+#buttons {
+    gap: 0px;
+}
