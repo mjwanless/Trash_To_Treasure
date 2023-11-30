@@ -85,7 +85,7 @@ function saveUserInfo() {
     //c) disable edit
     document.getElementById("personalInfoFields").disabled = true;
     setTimeout(() => {
-        location.reload()
+        location.reload();
     }, 500);
 }
 
@@ -108,52 +108,57 @@ function saveUserInfo() {
 
 function load_favourite_depots() {
     firebase.auth().onAuthStateChanged((user) => {
-        if (user) {            
+        if (user) {
             db.collection("users")
-            .doc(user.uid)
-            .get()
-            .then((doc) => {
-                let userData = doc.data().favorites;
-                console.log(userData)
-                let favourite_locations_html = "title: "
-                for (let i = 0; i < userData.length; i++) {
-                    let depot_name_formatted = userData[i]
-                    console.log(depot_name_formatted)
-                    favourite_locations_html += `<div>${depot_name_formatted}</div>`
-                }
-                $("#profile_favourite_depots").html(favourite_locations_html)
-            })
+                .doc(user.uid)
+                .get()
+                .then((doc) => {
+                    let userData = doc.data().favorites;
+                    console.log(userData);
+                    let favourite_locations_html = "Favourite depots: ";
+                    for (let i = 0; i < userData.length; i++) {
+                        let depot_name_formatted = userData[i];
+                        console.log(depot_name_formatted);
+                        favourite_locations_html += `<div class="favourite_display">${depot_name_formatted}</div>`;
+                    }
+                    $("#profile_favourite_depots").html(favourite_locations_html);
+                });
         }
-    })
+    });
 }
 
-load_favourite_depots()
+load_favourite_depots();
 
 // display_favourite_depots();
 
 document.addEventListener("click", function (e) {
-    const user_favorited_depot = e.target.closest(".favourite_display")
+    console.log("clicked");
+    const user_favorited_depot = e.target.closest(".favourite_display");
     if (user_favorited_depot) {
         console.log("pressed favorited depot display");
         store_user_favourited_depot_clicked(user_favorited_depot);
         redirect_user_to_depot_display();
     }
-})
+});
 
 function redirect_user_to_depot_display() {
-    window.location.href = "./depot_display_from_profile.html"
+    window.location.href = "./depot_display_from_profile.html";
 }
 
 function store_user_favourited_depot_clicked(user_favorited_depot) {
-    let depot_name = user_favorited_depot.innerHTML
-    localStorage.setItem("user_clicked_favourited_depot", depot_name)
+    let depot_name = user_favorited_depot.innerHTML;
+    localStorage.setItem("user_clicked_favourited_depot", depot_name);
 }
 function logout() {
-    firebase.auth().signOut().then(function() {
-        // Sign-out successful.
-        window.location.assign("login.html"); 
-    }).catch(function(error) {
-        // An error happened.
-        console.error("Error during logout: ", error);
-    });
+    firebase
+        .auth()
+        .signOut()
+        .then(function () {
+            // Sign-out successful.
+            window.location.assign("login.html");
+        })
+        .catch(function (error) {
+            // An error happened.
+            console.error("Error during logout: ", error);
+        });
 }
