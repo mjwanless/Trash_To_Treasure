@@ -19,10 +19,22 @@ html {
 }
 
 /* Headline border styling */
+#title_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 10vh;
+}
+
 #greeting_text {
-    text-align: center;
-    margin-bottom: 40px;
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* text-align: center; */
+    /* margin-bottom: 40px; */
     border-bottom: 1px solid #187753;
+    /* min-height: 10vh; */
+    /* text-decoration: 2px underline #187753; */
 }
 
 /* CSS for buttons */
