@@ -14,7 +14,6 @@
 
         <!-- CSS -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=VT323&display=swap" />
-
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;500;600;700&display=swap" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
         <link rel="stylesheet" href="styles/reset.css" />
@@ -38,29 +37,39 @@
         </header>
         <!-- Navbar placeholder -->
 
+        <!-- Main content container -->
         <div id="main_container">
+            <!-- Displays user name -->
             <h1 id="greeting_text">Hello, <span class="name_goes_here"></span></h1>
+            <!-- Displays user profile picture -->
             <div id="profile-info-display">
                 <form>
+                    <!-- Displays personal info fields -->
                     <fieldset id="personalInfoFields" disabled>
                         <div class="presentation_field">
+                            <!-- Displays name field -->
                             <label>Name: </label>
                             <input type="text" id="nameInput" class="form-control" placeholder="Enter your name" />
                         </div>
                         <div class="presentation_field">
+                            <!-- Displays school field -->
                             <label>School: </label>
                             <input type="text" id="schoolInput" class="form-control" placeholder="Enter your school" />
                         </div>
                         <div class="presentation_field">
+                            <!-- Displays city field -->
                             <label>City: </label>
                             <input type="text" id="cityInput" class="form-control" placeholder="Enter your city" />
                         </div>
                         <div class="presentation_field">
+                            <!-- Displays email field -->
                             <label>Email: </label>
                             <input type="text" id="emailInput" class="form-control" placeholder="Enter your city" />
                         </div>
+                        <!-- Displays dynamically loaded favourite depots -->
                         <div id="profile_favourite_depots"></div>
                     </fieldset>
+                    <!-- Displays buttons for editing and saving user info -->
                     <div id="profile_buttons">
                         <button type="button" class="profile_button_styles" onclick="editUserInfo()">Edit</button>
                         <button type="button" class="profile_button_styles" onclick="saveUserInfo()">Save</button>
