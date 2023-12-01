@@ -14,20 +14,21 @@ label {
 #personalInfoFields {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 22px;
     border: none;
 }
 
 .presentation_field {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    margin: 0 5vw;
 }
 
 .favourite_display {
     border: 1px solid #187753;
     border-radius: 10px;
     padding: 3px 6px;
-    margin-top: 10px;
+    /* margin-top: 10px; */
     min-width: 80vw;
 }
 
@@ -58,6 +59,9 @@ label {
 }
 
 #profile_favourite_depots {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
     overflow: scroll;
-    max-height: 30vh;
+    max-height: 15vh;
 }

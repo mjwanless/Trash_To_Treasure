@@ -115,7 +115,7 @@ function load_favourite_depots() {
                 .then((doc) => {
                     let userData = doc.data().favorites;
                     console.log(userData);
-                    let favourite_locations_html = "Favourite depots: ";
+                    let favourite_locations_html = "";
                     for (let i = 0; i < userData.length; i++) {
                         let depot_name_formatted = userData[i];
                         console.log(depot_name_formatted);
