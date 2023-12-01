@@ -1,3 +1,7 @@
+/*
+This is the reset used for the entire app, on every page. It is loaded first, in order to keep the stylings afterwards effective and evenly-applied.
+*/
+
 /* Box sizing rules */
 *,
 *::before,
