@@ -42,51 +42,51 @@
 
         <!-- Main content container -->
         <div id="main_container">
-            <!-- Displays location name -->
-            <div class="location_name"><span class="insert_name"></span></div>
-            <!-- Displays location map -->
-            <div id="map"></div>
-            <!-- Displays location phone number -->
-            <div class="location_phone"><span class="insert_phone"></span></div>
-            <!-- Displays location address -->
-            <div class="location_address"><span class="insert_address"></span></div>
-            <!-- Displays location website -->
-            <div class="location_website"><span class="insert_website"></span></div>
-            <!-- Displays location hours -->
-            <div class="location_hours">
-                <div>Monday: <span class="monday"></span></div>
-                <div>Tuesday: <span class="tuesday"></span></div>
-                <div>Wednesday: <span class="wednesday"></span></div>
-                <div>Thursday: <span class="thursday"></span></div>
-                <div>Friday: <span class="friday"></span></div>
-                <div>Saturday: <span class="saturday"></span></div>
-                <div>Sunday: <span class="sunday"></span></div>
-            </div>
-            <!-- Displays location notes -->
-            <div class="location_notes"><span class="insert_notes"></span></div>
-
-            <!-- Displays the favourite button -->
-            <div class="favourite_button">
-                <!-- Updated button with a star icon -->
-                <button id="favoriteButton" class="favorite-button"><span class="material-icons">star_border</span> Favorite</button>
-            </div>
-            <!-- Displays the review section -->
-            <div id="review_section">
-                <h3>Reviews</h3>
-
-                <div id="reviews_container"></div>
-                <div id="review_form">
-                    <div id="star_rating">
+            <div id="depot_display_elements">
+                <!-- Displays location name -->
+                <div class="location_name"><span class="insert_name"></span></div>
+                <!-- Displays location map -->
+                <div id="map">test</div>
+                <!-- Displays location phone number -->
+                <div class="location_phone"><span class="insert_phone"></span></div>
+                <!-- Displays location address -->
+                <div class="location_address"><span class="insert_address"></span></div>
+                <!-- Displays location website -->
+                <div class="location_website"><span class="insert_website"></span></div>
+                <!-- Displays location hours -->
+                <div class="location_hours">
+                    <div>Monday: <span class="monday"></span></div>
+                    <div>Tuesday: <span class="tuesday"></span></div>
+                    <div>Wednesday: <span class="wednesday"></span></div>
+                    <div>Thursday: <span class="thursday"></span></div>
+                    <div>Friday: <span class="friday"></span></div>
+                    <div>Saturday: <span class="saturday"></span></div>
+                    <div>Sunday: <span class="sunday"></span></div>
+                </div>
+                <!-- Displays location notes -->
+                <div class="location_notes"><span class="insert_notes"></span></div>
+                <!-- Displays the favourite button -->
+                <div class="favourite_button">
+                    <!-- Updated button with a star icon -->
+                    <button id="favoriteButton" class="favorite-button"><span class="material-icons">star_border</span> Favorite</button>
+                </div>
+                <!-- Displays the review section -->
+                <div id="review_section">
+                    <h3>Reviews</h3>
+                    <div id="reviews_container"></div>
+                    <div id="review_form">
                         <div id="star_rating">
-                            <span class="material-icons star" onclick="setRating(1)">star_border</span>
-                            <span class="material-icons star" onclick="setRating(2)">star_border</span>
-                            <span class="material-icons star" onclick="setRating(3)">star_border</span>
-                            <span class="material-icons star" onclick="setRating(4)">star_border</span>
-                            <span class="material-icons star" onclick="setRating(5)">star_border</span>
+                            <div id="star_rating">
+                                <span class="material-icons star" onclick="setRating(1)">star_border</span>
+                                <span class="material-icons star" onclick="setRating(2)">star_border</span>
+                                <span class="material-icons star" onclick="setRating(3)">star_border</span>
+                                <span class="material-icons star" onclick="setRating(4)">star_border</span>
+                                <span class="material-icons star" onclick="setRating(5)">star_border</span>
+                            </div>
                         </div>
+                        <textarea id="review_text" placeholder="Write your review..." required></textarea>
+                        <button onclick="submitReview()" id="submit_review_button">Submit Review</button>
                     </div>
-                    <textarea id="review_text" placeholder="Write your review..." required></textarea>
-                    <button onclick="submitReview()" id="submit_review_button">Submit Review</button>
                 </div>
             </div>
         </div>

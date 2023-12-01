@@ -8,7 +8,8 @@
 }
 
 .subcategory_button {
-    /* margin-bottom: 20px; Adjust this value for desired spacing */
+    margin-bottom: 0px; /*Adjust this value for desired spacing */
+
 }
 
 #subcategoriesContainer {
