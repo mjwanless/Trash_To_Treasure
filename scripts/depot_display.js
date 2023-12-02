@@ -187,7 +187,7 @@ function load_depot_information(collection) {
             $('.insert_image').html(depot_image)
             $('.insert_phone').html(depot_phone)
             $('.insert_address').html(depot_address)
-            let materials_html = "Accepted Materials: <br>"
+            let materials_html = `<span style="text-decoration: underline;">Accepted Materials: </span><br>`
             depot_accepted_materials.forEach((material) => {
                 let formatted_material_name = material.replace("_", " ")
                 materials_html += `${formatted_material_name} <br>`

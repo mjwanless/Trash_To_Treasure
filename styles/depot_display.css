@@ -15,6 +15,11 @@
     overflow: scroll;
     margin-top: 20px;
     gap: 20px;
+    max-width: 90vw;
+}
+
+.location_name {
+    color: #187753;
 }
 
 #map {
