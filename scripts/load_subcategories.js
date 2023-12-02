@@ -5,7 +5,7 @@ const user_selected_category = localStorage.getItem("user_selected_category");
 function display_material_subcategories(collection, user_selected_category) {
     // Access the specified database collection.
     let selected_category = user_selected_category.replaceAll("_", " ")
-    $("#page_title").html(`Subcategories of: ${selected_category}`)
+    $("#page_title").html(`Subcategories of ${selected_category}`)
     db.collection(collection)
         .doc(`${user_selected_category}`) // Access the document corresponding to the provided category.
         .get() // Retrieve the data from the document.

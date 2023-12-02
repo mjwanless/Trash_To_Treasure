@@ -1,10 +1,8 @@
-// categories.js
-
 function display_categories() {
     let firestore_materials_collection = firebase.firestore().collection("materials");
     firestore_materials_collection.get().then((materials) => {
+        
         let materials_array = materials.docs.map((doc) => doc.id);
-        console.log("materials_array: ", materials_array);
 
         const categoriesContainer = document.getElementById("categoriesContainer");
         categoriesContainer.innerHTML = "";

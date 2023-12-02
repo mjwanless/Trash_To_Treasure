@@ -1,11 +1,7 @@
-// Retrieve the user-selected subcategory from local storage.
-const user_selected_category = localStorage.getItem("user_selected_category")
-const user_selected_subcategory = localStorage.getItem("user_selected_subcategory")
-
 function load_material_information(collection) {
     // Accessing the database collection specified by the argument.
-    const category = window.localStorage.getItem("user_selected_category")
-    const subcategory = window.localStorage.getItem("user_selected_subcategory").replace(" ", "_")
+    const category = localStorage.getItem("user_selected_category")
+    const subcategory = localStorage.getItem("user_selected_subcategory").replace(" ", "_")
     db.collection(collection)
         .doc(category)
         .get()
@@ -38,7 +34,11 @@ function load_material_information(collection) {
     const imgTag = `<img src="${imgUrl}" alt="${material_data["name"]}">`;
     $(".insert_image").html(imgTag);
 });
-        }
+}
+
+// Retrieve the user-selected subcategory from local storage.
+const user_selected_category = localStorage.getItem("user_selected_category")
+const user_selected_subcategory = localStorage.getItem("user_selected_subcategory")
 
 function load_valid_depots() {
     let valid_locations_html = ""
