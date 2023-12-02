@@ -189,7 +189,8 @@ function load_depot_information(collection) {
             $('.insert_address').html(depot_address)
             let materials_html = "Accepted Materials: <br>"
             depot_accepted_materials.forEach((material) => {
-                materials_html += `${material} <br>`
+                let formatted_material_name = material.replace("_", " ")
+                materials_html += `${formatted_material_name} <br>`
             })
             $(".insert_accepted_materials").html(materials_html)
             $('.monday').html(depot_hours["monday"])
@@ -200,6 +201,6 @@ function load_depot_information(collection) {
             $('.saturday').html(depot_hours["saturday"])
             $('.sunday').html(depot_hours["sunday"])
 });
-        }
+}
 
 load_depot_information("locations")
