@@ -17,4 +17,5 @@
     flex-direction: column;
     gap: 25px;
     overflow: scroll;
+    margin-bottom: 10px;
 }
