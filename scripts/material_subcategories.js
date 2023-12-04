@@ -3,7 +3,8 @@
 function display_material_subcategories(collection) {
     const user_selected_category = localStorage.getItem("user_selected_category");
     console.log("Selected Category:", user_selected_category);
-
+    let formatted = user_selected_category.replaceAll("_", " ")
+    $("#page_title").html(`Subcategories of ${formatted}`)
     db.collection(collection)
         .doc(user_selected_category)
         .get()
