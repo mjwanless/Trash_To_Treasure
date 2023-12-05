@@ -19,22 +19,23 @@ function loadSkeleton() {
 }
 loadSkeleton(); //invoke the function
 
+// Changes the window location to the homepage and redirects the user
 function home_button_redirect() {
     window.location.href = "./homepage.html";
 }
 
+// Sends the user back one page in the browser history when the back button is clicked
 document.addEventListener("click", function (e) {
     const back_button_clicked = e.target.closest("#back_button");
     if (back_button_clicked) {
-        console.log("back button clicked");
         window.history.back();
     }
 });
 
+// Redirects the user to the homepage when the home button is clicked
 document.addEventListener("click", function (e) {
     const home_clicked = e.target.closest("#home_button");
     if (home_clicked) {
-        console.log("home button clicked");
         home_button_redirect();
     }
 });

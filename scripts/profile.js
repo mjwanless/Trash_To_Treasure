@@ -2,12 +2,10 @@ function displayNameFromFirestore() {
     // Check if the user is logged in:
     firebase.auth().onAuthStateChanged((user) => {
         if (user) {
-            console.log(user.uid); // Let's know who the logged-in user is by logging their UID
             currentUser = db.collection("users").doc(user.uid); // Go to the Firestore document of the user
             currentUser.get().then((userDoc) => {
                 // Get the user name
                 let userName = userDoc.data().name;
-                console.log(userName);
                 //$("#name-goes-here").text(userName); // jQuery
                 document.getElementsByClassName("name_goes_here")[0].innerHTML = userName;
             });
@@ -57,13 +55,13 @@ function populateUserInfo() {
 
 //call the function to run it
 populateUserInfo();
+
 function editUserInfo() {
     //Enable the form fields
-
     document.getElementById("personalInfoFields").disabled = false;
 }
+
 function saveUserInfo() {
-    //enter code here
     //a) get user entered values
     userName = document.getElementById("nameInput").value; //get the value of the field with id="nameInput"
     userSchool = document.getElementById("schoolInput").value; //get the value of the field with id="schoolInput"
@@ -89,23 +87,6 @@ function saveUserInfo() {
     }, 500);
 }
 
-// function display_favourite_depots() {
-//     firebase.auth().onAuthStateChanged((user) => {
-//         if (user) {
-//             db.collection("users")
-//                 .doc(user.uid)
-//                 .get()
-//                 .then((doc) => {
-//                     let userData = doc.data().favorites;
-
-//                     for (i = 0; i < userData.length; i++) {
-//                         $(`.favourite_${i}`).html(userData[i]);
-//                     }
-//                 });
-//         }
-//     });
-// }
-
 function load_favourite_depots() {
     firebase.auth().onAuthStateChanged((user) => {
         if (user) {
@@ -128,8 +109,6 @@ function load_favourite_depots() {
 }
 
 load_favourite_depots();
-
-// display_favourite_depots();
 
 document.addEventListener("click", function (e) {
     console.log("clicked");
