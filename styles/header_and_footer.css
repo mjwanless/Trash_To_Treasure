@@ -17,10 +17,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    /* font-family: Pixelify Sans; */
     font-size: 1.8rem;
     text-align: center;
-    /* padding-right: 70px; */
     padding: 0 20px;
 }
 

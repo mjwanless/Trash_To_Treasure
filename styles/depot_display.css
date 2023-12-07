@@ -1,12 +1,5 @@
 #main_container {
-    display: flex;
-    /* padding-top: 0px; */
-    /* padding-bottom: 20px; */
     font-size: 1.2rem;
-    /* justify-content: space-evenly; */
-    /* gap: 20px; */
-    /* align-items: flex-start; */
-    /* margin-left: 40px; */
 }
 
 #depot_display_elements {
@@ -23,8 +16,6 @@
 }
 
 #map {
-    /* width: 80vw; */
-    /* height: 20vh; */
     padding-bottom: 200px;
 }
 
@@ -35,15 +26,15 @@
     border-radius: 15px;
     background-color: transparent;
     cursor: pointer;
-    font-size: 24px; /* Adjust the size of the icon */
-    color: orange; /* Color of the star */
+    font-size: 24px;
+    color: orange;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     background-color: beige;
     align-self: center;
 }
 
 .favorite-button:hover {
-    color: orange; /* Color when hovering over the button */
+    color: orange;
 }
 .location_hours {
     min-width: 80vw;
@@ -58,43 +49,39 @@
     border: 1px solid #187753;
     border-radius: 10px;
     padding: 3px 6px;
-    /* max-width: 80vw; */
 }
 
 .favourite_button {
     align-self: center;
-    /* margin-right: 40px; */
 }
 
-/* Review Section Styles */
 #review_section {
-    width: 100%; /* Increase the width */
+    width: 100%;
     padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: adds a subtle shadow for depth */
-    background-color: #fff; /* Optional: change background color */
-    border-radius: 10px; /* Optional: rounded corners */
-    border: 1px solid #187753; /* Adding the border */
-    border-radius: 10px; /* Adding rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    border-radius: 10px;
+    border: 1px solid #187753;
+    border-radius: 10px;
     margin-bottom: 20px;
 }
 
 #reviews_container {
-    max-height: 200px; /* Adjust the height as per your requirement */
-    overflow-y: auto; /* Enables vertical scrolling */
+    max-height: 200px;
+    overflow-y: auto;
     padding: 10px;
-    border: 1px solid #ccc; /* Optional: adds a border */
+    border: 1px solid #ccc;
     margin-top: 10px;
 }
 
 .review {
-    margin-bottom: 10px; /* Space between reviews */
+    margin-bottom: 10px;
 }
 
 #review_form {
     margin-top: 20px;
 }
 
-/* Star Rating Styles */
 .star {
     cursor: pointer;
     color: grey;
@@ -106,8 +93,8 @@
 
 #star_rating {
     display: flex;
-    justify-content: flex-start; /* Align stars to the left */
-    gap: 5px; /* Adjust gap between stars */
+    justify-content: flex-start;
+    gap: 5px;
 }
 
 #review_text {
@@ -117,7 +104,7 @@
     padding: 10px;
     border: 1px solid #ccc;
 }
-/* Submit Review Button Styles */
+
 #submit_review_button {
     box-sizing: border-box;
     margin: 0;

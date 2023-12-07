@@ -1,11 +1,7 @@
-/* 
-This file contains styles that are applied, app-wide, to all pages. They are commonly-found elements, and repeated styles.
-*/
 html {
     font-family: "VT323", monospace;
 }
 
-/* Turns the main container (sections between the header/footer) into a structured flexbox layout */
 #main_container {
     display: flex;
     flex-direction: column;
@@ -18,7 +14,6 @@ html {
     overflow: scroll;
 }
 
-/* Headline border styling */
 #title_container {
     display: flex;
     justify-content: center;
@@ -27,17 +22,9 @@ html {
 }
 
 #greeting_text {
-    /* display: flex; */
-    /* justify-content: center; */
-    /* align-items: center; */
-    /* text-align: center; */
-    /* margin-bottom: 40px; */
     border-bottom: 1px solid #187753;
-    /* min-height: 10vh; */
-    /* text-decoration: 2px underline #187753; */
 }
 
-/* CSS for buttons */
 #buttons {
     display: flex;
     flex-wrap: wrap;
@@ -46,7 +33,6 @@ html {
     align-items: center;
 }
 
-/* Applied to the buttons on all the main/search pages */
 .main_button {
     min-width: 80vw;
     min-height: 12vh;
@@ -63,7 +49,6 @@ html {
     padding: 0 7vw;
 }
 
-/* For added feedback impact when interacting with buttons */
 .main_button:hover {
     background-color: #55ac85;
 }

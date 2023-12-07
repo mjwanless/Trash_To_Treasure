@@ -1,15 +1,9 @@
-/* #main_container {
-    padding-top: 400px;
-    padding-bottom: 30px;
-} */
-
 .main_button {
     font-size: 1.7rem;
 }
 
 .subcategory_button {
-    margin-bottom: 0px; /*Adjust this value for desired spacing */
-
+    margin-bottom: 0px;
 }
 
 #subcategoriesContainer {
