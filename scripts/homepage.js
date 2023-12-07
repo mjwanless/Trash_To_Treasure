@@ -1,68 +1,54 @@
+// Define functions for redirecting the user to different pages
 function redirect_user_to_search_page() {
     window.location.href = "material_categories.html";
 }
+
 function redirect_user_to_depot_locations_page() {
     window.location.href = "depot_locations.html";
 }
+
 function redirect_user_to_other_resources_page() {
     window.location.href = "other_resources.html";
 }
+
 function redirect_user_to_profile_page() {
     window.location.href = "profile.html";
 }
 
+// Add a single event listener for click events and handle redirection based on the clicked button
 document.addEventListener("click", function (e) {
-    const profile_clicked = e.target.closest(".search_button");
-    if (profile_clicked) {
+    if (e.target.closest(".search_button")) {
         redirect_user_to_search_page();
-    }
-});
-document.addEventListener("click", function (e) {
-    const profile_clicked = e.target.closest(".depot_locations_button");
-    if (profile_clicked) {
+    } else if (e.target.closest(".depot_locations_button")) {
         redirect_user_to_depot_locations_page();
-    }
-});
-document.addEventListener("click", function (e) {
-    const profile_clicked = e.target.closest(".other_resources_button");
-    if (profile_clicked) {
+    } else if (e.target.closest(".other_resources_button")) {
         redirect_user_to_other_resources_page();
-    }
-});
-document.addEventListener("click", function (e) {
-    const profile_clicked = e.target.closest(".profile_button");
-    if (profile_clicked) {
+    } else if (e.target.closest(".profile_button")) {
         redirect_user_to_profile_page();
     }
 });
 
+// Function to display the username of the logged-in user
 function display_username() {
-    // Check if the user is logged in:
     firebase.auth().onAuthStateChanged((user) => {
         if (user) {
-            console.log(user.uid); // Let's know who the logged-in user is by logging their UID
-            currentUser = db.collection("users").doc(user.uid); // Go to the Firestore document of the user
+            currentUser = db.collection("users").doc(user.uid);
             currentUser.get().then((userDoc) => {
-                // Get the user name
                 let userName = userDoc.data().name;
-                console.log(userName);
-                //$("#name-goes-here").text(userName); // jQuery
                 document.getElementsByClassName("name_goes_here")[0].innerHTML = userName;
             });
-        } else {
-            console.log("No user is logged in."); // Log a message when no user is logged in
         }
     });
 }
 
-// just a test function to help me understand getting the user ID
+// Test function to log the user ID for debugging
 function test_console_log_user_id() {
     firebase.auth().onAuthStateChanged((user) => {
         if (user) {
-            console.log(user.uid);
+            // User ID can be used here as needed
         }
     });
 }
 
-display_username();
-test_console_log_user_id();
+display_username();  // Call the function to display the username
+test_console_log_user_id();  // Call the test function

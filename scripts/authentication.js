@@ -1,12 +1,14 @@
-// Initialize the FirebaseUI Widget using Firebase.
+// Initialize FirebaseUI Auth interface
 let ui = new firebaseui.auth.AuthUI(firebase.auth());
+
+// Configuration for the FirebaseUI widget
 let uiConfig = {
     callbacks: {
         signInSuccessWithAuthResult: function (authResult, redirectUrl) {
-            // User successfully signed in.
-            // Return type determines whether we continue the redirect automatically
-            // or whether we leave that to developer to handle.
+            // Callback for successful sign in
             let user = authResult.user;
+
+            // Check if the user is new and add them to Firestore
             if (authResult.additionalUserInfo.isNewUser) {
                 db.collection("users")
                     .doc(user.uid)
@@ -17,38 +19,34 @@ let uiConfig = {
                         school: "BCIT",
                     })
                     .then(function () {
-                        console.log("new user added to firestore");
+                        // Redirect to homepage after successful new user addition
                         window.location.assign("homepage.html");
                     })
                     .catch(function (error) {
-                        console.log("Error adding new user: " + error);
+                        // Handle error in adding new user
+                        console.error("Error adding new user: " + error);
                     });
             } else {
+                // Continue with redirect for existing users
                 return true;
             }
             return false;
         },
+        // Uncomment to hide loader when UI is shown
         // uiShown: function () {
-        //     // The widget is rendered.
-        //     // Hide the loader.
         //     document.getElementById('loader').style.display = 'none';
         // }
     },
-    // Will use popup for IDP Providers sign-in flow instead of the default, redirect.
-    signInFlow: "popup",
-    signInSuccessUrl: "homepage.html",
+    signInFlow: "popup", // Use popup for sign-in instead of redirect
+    signInSuccessUrl: "homepage.html", // URL to redirect to on successful sign-in
     signInOptions: [
-        // Leave the lines as is for the providers you want to offer your users.
-        // firebase.auth.GoogleAuthProvider.PROVIDER_ID,
-        // firebase.auth.FacebookAuthProvider.PROVIDER_ID,
-        // firebase.auth.TwitterAuthProvider.PROVIDER_ID,
-        // firebase.auth.GithubAuthProvider.PROVIDER_ID,
+        // Configuration for various sign-in options
         firebase.auth.EmailAuthProvider.PROVIDER_ID,
-        // firebase.auth.PhoneAuthProvider.PROVIDER_ID
+        // List other providers as needed
     ],
-    // Terms of service url.
-    tosUrl: "<your-tos-url>",
-    // Privacy policy url.
-    privacyPolicyUrl: "<your-privacy-policy-url>",
+    tosUrl: "<your-tos-url>", // URL to your Terms of Service
+    privacyPolicyUrl: "<your-privacy-policy-url>", // URL to your Privacy Policy
 };
+
+// Start the FirebaseUI Auth widget
 ui.start("#firebaseui_auth_container", uiConfig);

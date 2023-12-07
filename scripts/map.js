@@ -28,28 +28,18 @@ function showMap() {
                 // Add the image to the map style.
                 map.addImage('eventpin', image); // Pin Icon
 
-                // get user selected location
-                let user_selected_depot = localStorage.getItem("user_selected_depot")
-                console.log(user_selected_depot)
-                let trim_user_selected_depot = user_selected_depot.trim()
-                console.log(trim_user_selected_depot)
-                let remove_br_element = trim_user_selected_depot.replace("<br>", " ")
-                console.log(remove_br_element)
-                let to_lower_case = remove_br_element.toLocaleLowerCase()
-                console.log(to_lower_case)
-                let formatted_depot_name = to_lower_case.replaceAll(" ", "_")
-                console.log(formatted_depot_name)
-                // READING information from "locations" collection in Firestore
+                // Get user selected location
+                let user_selected_depot = localStorage.getItem("user_selected_depot");
+                let formatted_depot_name = user_selected_depot.trim().replace("<br>", " ")
+                    .toLocaleLowerCase().replaceAll(" ", "_");
+
+                // Reading information from "locations" collection in Firestore
                 db.collection('locations').doc(formatted_depot_name).get().then(selected_depot => {
-                    let depot_data = selected_depot.data()
-                    console.log(depot_data)
-                    console.log("got user depot")
+                    let depot_data = selected_depot.data();
                     const features = [];
-                    lat = selected_depot.data().lat;
-                    lng = selected_depot.data().lng;
-                    console.log(lat, lng);
+                    let lat = selected_depot.data().lat;
+                    let lng = selected_depot.data().lng;
                     let coordinates = [lng, lat];
-                    console.log(coordinates);
                     features.push({
                         'geometry': {
                             'type': 'Point',
@@ -67,7 +57,6 @@ function showMap() {
                     });
 
                     // Creates a layer above the map displaying the pins
-                    // by using the sources that was just added
                     map.addLayer({
                         'id': 'places',
                         'type': 'symbol',
