@@ -38,9 +38,7 @@ Here are the steps ...
 
 Here are some known bugs:
 
--  If you unfavourite a location and navigate to the profiles page with the back button. The unfavourited location still appears on your profile.
--  Logout feature does not work.
--  Styling does not appear on some elements due to layout
+- Depending on the device, or screen size, there are small css and layout variations
 
 ## 6. Features for Future
 
@@ -48,7 +46,7 @@ What we'd like to build in the future:
 
 -  Photo and video recognition for materials
 -  Directions functionality for our map feature
--  Add animations or styling to improve app responsiveness feeling
+-  Add animations or styling to improve app responsiveness and feeling
 
 ## 7. Contents of Folder
 
